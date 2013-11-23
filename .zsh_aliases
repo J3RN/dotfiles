@@ -1,0 +1,3 @@
+alias prj="cd ~/workspace/Work/membership-advantage"
+alias resnet="python ~/workspace/Python/OSU-ResNet-Login/resnet.py"
+alias minecraft="java -jar ~/Documents/Minecraft.jar"
