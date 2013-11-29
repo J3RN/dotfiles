@@ -1,3 +1,8 @@
 alias prj="cd ~/workspace/Work/membership-advantage"
 alias resnet="python ~/workspace/Python/OSU-ResNet-Login/resnet.py"
 alias minecraft="java -jar ~/Documents/Minecraft.jar"
+alias celar="clear"
+alias weechat="weechat-curses"
+alias mount-cse="sshfs arnettj@stdlinux.cse.ohio-state.edu:/home/6/arnettj ~/workspace/School/Mount"
+alias unmount-cse="fusermount -uz ~/workspace/School/Mount"
+alias ssh-cse="ssh -X arnettj@stdlinux.cse.ohio-state.edu"
