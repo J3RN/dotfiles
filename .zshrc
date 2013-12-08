@@ -51,8 +51,8 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 bindkey -v
 
 # Include 
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
