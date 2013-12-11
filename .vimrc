@@ -34,6 +34,12 @@ set showmode
 " Unix line endings. Seriously, people.
 set fileformat=unix
 
+" Syntax Highlighting
+syntax on
+
+" No line wrapping
+set nowrap
+
 " Rainbow Parentheses
 "au VimEnter * RainbowParenthesesToggle
 "au Syntax * RainbowParenthesesLoadRound
