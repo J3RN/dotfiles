@@ -34,19 +34,26 @@ set showmode
 " Unix line endings. Seriously, people.
 set fileformat=unix
 
-" Syntax Highlighting
-syntax on
-
 " No line wrapping
 set nowrap
 
-" Rainbow Parentheses
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
+" Pathogen
+execute pathogen#infect()
 
-" Pathogen and Coffeescript
-"call pathogen#infect()
-"syntax enable
-"filetype plugin indent on
+" Syntax Highlighting
+syntax on
+
+" Enable the filetype plugin and indenting
+filetype plugin indent on
+
+" Enable airline bar all the time
+set laststatus=2
+
+" Enable powerline font for airline
+let g:airline_powerline_fonts = 1
+
+" Set vim to use 256 colors (Tmux/Vim Airline fix)
+set t_Co=256
+
+" Set NERDTree to toggle on CTRL-n
+map <C-n> :NERDTreeToggle<CR>

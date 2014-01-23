@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="crcandy"
+ZSH_THEME="agnoster"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -55,11 +55,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/heroku/bin:$PATH" # Add Heroku to PATH
+
+# Welcome message
 echo "       _______ ____  _   __"
 echo "      / /__  // __ \\/ | / / "
 echo " __  / / /_ </ /_/ /  |/ /  "
 echo "/ /_/ /___/ / _, _/ /|  /  "
 echo "\\____//____/_/ |_/_/ |_/   "
-fortune | cowsay
+fortune
