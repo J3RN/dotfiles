@@ -57,3 +57,6 @@ set t_Co=256
 
 " Set NERDTree to toggle on CTRL-n
 map <C-n> :NERDTreeToggle<CR>
+
+" Needed as I use fish
+set shell=/bin/bash
