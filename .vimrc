@@ -60,3 +60,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Needed as I use fish
 set shell=/bin/bash
+
+" I was told all the cool kids did it
+:imap jk <Esc>
