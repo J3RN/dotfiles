@@ -13,20 +13,21 @@ alias xmxr="xrdb -merge ~/.Xresources"
 alias prj="cd ~/workspace/work/quote-builder && tmux new -s work"
 alias sp="sudo systemctl start postgresql"
 alias ap="RAILS_ENV=production bundle exec rake assets:precompile"
+alias qb-dev-restore="pg_restore --verbose --clean --no-acl --no-owner -h localhost -U jonathan -d qb_development latest.dump"
 
 ## Git
 alias co="git checkout"
 alias push="git push"
 alias psuh="git push"
 alias deploy="git push && git push heroku"
-alias push-u="git push -u origin "
+alias pushu="git push -u origin "
 alias fetch="git fetch"
 alias fupst="git fetch upstream"
-alias mupm="git merge upstream/master"
 alias status="git status"
 alias stat="git status"
 alias mkbr="git checkout -B"
 alias rmbr="git branch -d"
+alias Rmbr="git branch -D"
 alias lsbr="git branch -l"
 alias branch="git branch"
 alias add="git add"
@@ -55,9 +56,9 @@ alias ckear="clear"
 
 ## For IRC
 alias irc="weechat-curses"
-alias weechat="weechat-curses"
+#alias weechat="weechat-curses"
 
-## For Tmux 
+## For Tmux
 alias tls="tmux list-sessions"
 alias ta="tmux attach -t"
 

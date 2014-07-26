@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -30,7 +26,7 @@ ZSH_THEME="agnoster"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -40,7 +36,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git rails vi-mode bundler)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,15 +46,25 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 # Set Vim keybindings
 bindkey -v
 
-# Include 
+# Use Vim, natürlich
+export EDITOR=vim
+
+# Include
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
+# Linux keychain
+# eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
+# I use this for better_errors with Unicorn and Foreman. Long story.
+export WEB_CONCURRENCY=1
+
+# Additions to the path
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/heroku/bin:$PATH" # Add Heroku to PATH
+PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH" # Postgres.app
+PATH="/Applications/Android Studio.app/sdk/platform-tools:$PATH"  # Android tools
 
 # Welcome message
 echo "       _______ ____  _   __"
@@ -66,4 +72,4 @@ echo "      / /__  // __ \\/ | / / "
 echo " __  / / /_ </ /_/ /  |/ /  "
 echo "/ /_/ /___/ / _, _/ /|  /  "
 echo "\\____//____/_/ |_/_/ |_/   "
-fortune
+echo ""
