@@ -2,7 +2,7 @@
 set fish_path $HOME/.oh-my-fish
 
 # Theme
-set fish_theme agnoster
+set fish_theme bobthefish
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
@@ -21,8 +21,14 @@ set fish_plugins rvm rails bundler emoji-clock extract vi-mode
 # Load plugins
 set fish_plugins git rails
 
-# Add Heroku to PATH
-set PATH "/usr/local/heroku/bin" $PATH 
+# Add Postgres.app directory to PATH (Mac only)
+set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
+
+# Make brew VIM higher priority
+set PATH "/usr/local/Cellar" $PATH
+
+# Add Heroku to PATH (Linux)
+#set PATH "/usr/local/heroku/bin" $PATH 
 
 # Set editor to VIM
 set EDITOR vim
