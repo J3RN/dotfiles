@@ -66,6 +66,10 @@ PATH="/usr/local/heroku/bin:$PATH" # Add Heroku to PATH
 PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH" # Postgres.app
 PATH="/Applications/Android Studio.app/sdk/platform-tools:$PATH"  # Android tools
 
+### NVM
+export NVM_DIR="/Users/jonathan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Welcome message
 echo "       _______ ____  _   __"
 echo "      / /__  // __ \\/ | / / "
