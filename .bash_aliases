@@ -16,6 +16,7 @@ alias ap="RAILS_ENV=production bundle exec rake assets:precompile"
 alias qb-dev-restore="pg_restore --verbose --clean --no-acl --no-owner -h localhost -U jonathan -d qb_development latest.dump"
 
 ## Git
+alias pr="hub pull-request"
 alias co="git checkout"
 alias push="git push"
 alias psuh="git push"
@@ -36,6 +37,7 @@ alias diff="git diff"
 alias com="git commit -m"
 alias gpum="git pull upstream master"
 alias pubr="git pull git@github.com:j3rn/quote-builder"
+alias pull="git pull"
 
 ## For OSU
 alias ssh-cse="ssh -X arnettj@stdlinux.cse.ohio-state.edu"
