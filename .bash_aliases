@@ -61,6 +61,7 @@ alias irc="weechat-curses"
 ## For Tmux
 alias tls="tmux list-sessions"
 alias ta="tmux attach -t"
+alias tn="tmux new -s"
 
 ## For Package management
 # Paktahn version
