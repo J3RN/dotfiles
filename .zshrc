@@ -49,7 +49,7 @@ bindkey -v
 # Use Vim, natürlich
 export EDITOR=vim
 
-# Include
+# Include bash aliases, if they exist
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
