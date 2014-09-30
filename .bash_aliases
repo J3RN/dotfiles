@@ -57,7 +57,8 @@ alias claer="clear"
 alias ckear="clear"
 
 ## For IRC
-alias irc="weechat-curses"
+alias irc="weechat"
+#alias irc="weechat-curses"
 #alias weechat="weechat-curses"
 
 ## For Tmux
@@ -86,3 +87,5 @@ alias remove="yaourt -R"
 alias j3rn-serv="ssh jthrrnco@j3rn.com"
 alias mine-serv="ssh j3rn@minecraft.j3rn.com"
 
+## For niceity
+alias ls="ls -1"
