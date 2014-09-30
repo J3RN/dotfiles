@@ -5,7 +5,7 @@ alias ba="vim ~/.bash_aliases"
 alias szrc=". ~/.zshrc"
 alias sbrc=". ~/.bashrc"
 
-## For more configuration
+## For config files
 alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
