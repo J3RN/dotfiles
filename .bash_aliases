@@ -45,9 +45,6 @@ alias mount-cse="sshfs arnettj@stdlinux.cse.ohio-state.edu:/home/6/arnettj ~/wor
 alias unmount-cse="fusermount -uz ~/workspace/School/Mount"
 alias resnet="python2 ~/workspace/python/OSU-ResNet-Login/resnet.py"
 
-## For Gaming
-alias mine-blog="cd ~/workspace/ruby/J3RNsMinecraftBlog/"
-
 ## For Mistakes
 alias c="clear"
 alias celar="clear"
