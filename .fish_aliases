@@ -87,3 +87,5 @@ alias remove="yaourt -R"
 alias j3rn-serv="ssh jthrrnco@j3rn.com"
 alias mine-serv="ssh j3rn@minecraft.j3rn.com"
 
+alias ls="ls -1"
+#alias grep="grep -Rn"
