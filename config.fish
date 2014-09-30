@@ -32,3 +32,10 @@ set PATH "/usr/local/Cellar" $PATH
 
 # Set editor to VIM
 set EDITOR vim
+
+# GOPATH
+set GOPATH /Users/jonathan/.gocode
+
+test -s /Users/jonathan/.nvm-fish/nvm.fish; and source /Users/jonathan/.nvm-fish/nvm.fish
+
+nvm use 0.10
