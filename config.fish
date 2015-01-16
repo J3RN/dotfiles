@@ -25,10 +25,11 @@ set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
 set PATH "/usr/local/Cellar" $PATH
 
 # Add Heroku to PATH (Linux)
-#set PATH "/usr/local/heroku/bin" $PATH 
+#set PATH "/usr/local/heroku/bin" $PATH
 
 # Set editor to VIM
 set EDITOR vim
+set NODE_ENV development
 
 # GOPATH
 set GOPATH /Users/jonathan/.gocode
