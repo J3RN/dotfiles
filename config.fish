@@ -34,6 +34,9 @@ set NODE_ENV development
 # GOPATH
 set GOPATH /Users/jonathan/.gocode
 
+# NVM path
 test -s /Users/jonathan/.nvm-fish/nvm.fish; and source /Users/jonathan/.nvm-fish/nvm.fish
 
-nvm use 0.10
+if type nvm > /dev/null
+  nvm use 0.10
+end
