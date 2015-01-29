@@ -18,11 +18,14 @@ set fish_plugins rvm git rails emoji-clock extract vi-mode
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
-# Add Postgres.app directory to PATH (Mac only)
-set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
+# OSX only items
+if uname | grep "Darwin"
+  # Add Postgres.app directory to PATH (Mac only)
+  set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
 
-# Make brew VIM higher priority
-set PATH "/usr/local/Cellar" $PATH
+  # Make brew VIM higher priority
+  set PATH "/usr/local/Cellar" $PATH
+end
 
 # Add Heroku to PATH (Linux)
 #set PATH "/usr/local/heroku/bin" $PATH
