@@ -1,0 +1,18 @@
+# ~/.tmuxinator/cwdg.yml
+
+name: cwdg
+root: "~/workspace/cwdg/projects/cwdg-website"
+
+windows:
+  - editor:
+      layout: 10b4,181x55,0,0{84x55,0,0,15,96x55,85,0[96x27,85,0,17,96x27,85,28,18]}
+      panes:
+        - vim
+  - other:
+      layout: main-vertical
+      panes:
+        -
+        - rails c
+  - server:
+      panes:
+        - rails s
