@@ -1,0 +1,13 @@
+# ~/.tmuxinator/twiw.yml
+
+name: twiw
+root: "~/workspace/cwdg/talks/twiw"
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim index.html
+  - server:
+      panes:
+        - grunt serve

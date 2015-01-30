@@ -1,0 +1,12 @@
+# ~/.tmuxinator/ohiobot.yml
+
+name: ohiobot
+root: "~/workspace/clojure/ohiobot/"
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim src/ohiobot/core.clj +NERDTree
+        - lein repl
+        -

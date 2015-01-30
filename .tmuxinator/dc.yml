@@ -1,0 +1,12 @@
+# ~/.tmuxinator/dc.yml
+
+name: dc
+root: "~/workspace/cwdg/projects/design-circle"
+
+windows:
+  - editor: vim
+  - server:
+      layout: main-horizontal
+      panes:
+        - grunt
+        - mongod
