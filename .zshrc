@@ -51,3 +51,6 @@ echo " __  / / /_ </ /_/ /  |/ /  "
 echo "/ /_/ /___/ / _, _/ /|  /  "
 echo "\\____//____/_/ |_/_/ |_/   "
 echo ""
+
+# added by travis gem
+[ -f /Users/jonathan/.travis/travis.sh ] && source /Users/jonathan/.travis/travis.sh
