@@ -19,7 +19,7 @@ set fish_plugins rvm git rails emoji-clock extract vi-mode
 . $fish_path/oh-my-fish.fish
 
 # OSX only items
-if uname | grep "Darwin"
+if uname | grep "Darwin" > /dev/null
   # Add Postgres.app directory to PATH (Mac only)
   set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
 
