@@ -47,7 +47,9 @@ end
 
 # Print out running Tmux sessions
 if which tmux > /dev/null
-  echo -n "Sessions: "
-  tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' '
-  echo
+  set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
+
+  if [ $sessions ]
+    echo "Sessions: $sessions"
+  end
 end
