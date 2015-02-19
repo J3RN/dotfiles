@@ -38,8 +38,16 @@ set NODE_ENV development
 set GOPATH /Users/jonathan/.gocode
 
 # NVM path
-test -s /Users/jonathan/.nvm-fish/nvm.fish; and source /Users/jonathan/.nvm-fish/nvm.fish
 
-if type nvm > /dev/null
-  nvm use 0.10
+# Load NVM
+if test -s /Users/jonathan/.nvm-fish/nvm.fish
+  source /Users/jonathan/.nvm-fish/nvm.fish
+  nvm use 0.10 > /dev/null
+end
+
+# Print out running Tmux sessions
+if which tmux > /dev/null
+  echo -n "Sessions: "
+  tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' '
+  echo
 end
