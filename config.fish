@@ -35,13 +35,13 @@ export EDITOR=vim
 export NODE_ENV=development
 
 # GOPATH
-set GOPATH /Users/jonathan/.gocode
+set GOPATH ~/.gocode
 
 # NVM path
 
 # Load NVM
-if test -s /Users/jonathan/.nvm-fish/nvm.fish
-  source /Users/jonathan/.nvm-fish/nvm.fish
+if test -s ~/.nvm-fish/nvm.fish
+  source ~/.nvm-fish/nvm.fish
   nvm use 0.10 > /dev/null
 end
 
