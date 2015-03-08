@@ -31,8 +31,8 @@ end
 #set PATH "/usr/local/heroku/bin" $PATH
 
 # Set editor to VIM
-set EDITOR=vim
-set NODE_ENV=development
+set EDITOR vim
+set NODE_ENV development
 
 # GOPATH
 set GOPATH ~/.gocode
