@@ -37,8 +37,6 @@ set NODE_ENV development
 # GOPATH
 set GOPATH ~/.gocode
 
-# NVM path
-
 # Load NVM
 if test -s ~/.nvm-fish/nvm.fish
   source ~/.nvm-fish/nvm.fish
