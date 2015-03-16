@@ -31,11 +31,13 @@ end
 #set PATH "/usr/local/heroku/bin" $PATH
 
 # Set editor to VIM
-set EDITOR vim
-set NODE_ENV development
+set -x EDITOR=vim
 
 # GOPATH
 set GOPATH ~/.gocode
+
+# Set node development environment (can be read without being exported?)
+set NODE_ENV development
 
 # Load NVM
 if test -s ~/.nvm-fish/nvm.fish
