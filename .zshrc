@@ -35,7 +35,6 @@ fi
 export WEB_CONCURRENCY=1
 
 # Additions to the path
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/heroku/bin:$PATH" # Add Heroku to PATH
 PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH" # Postgres.app
 PATH="/Applications/Android Studio.app/sdk/platform-tools:$PATH"  # Android tools
