@@ -29,7 +29,7 @@ end
 #set PATH "/usr/local/heroku/bin" $PATH
 
 # Set editor to VIM
-set -x EDITOR=vim
+set -x EDITOR vim
 
 # GOPATH
 set GOPATH ~/.gocode
