@@ -51,3 +51,10 @@ if which tmux > /dev/null
     echo "Sessions: $sessions"
   end
 end
+
+# Load rbenv
+if which rbenv > /dev/null
+  set PATH $HOME/.rbenv/bin $PATH
+  set PATH $HOME/.rbenv/shims $PATH
+  rbenv rehash >/dev/null ^&1
+end
