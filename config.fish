@@ -43,7 +43,7 @@ if test -s ~/.nvm-fish/nvm.fish
   nvm use 0.10 > /dev/null
 end
 
-# Print out running Tmux sessions
+# Print out running Tmux sessions, if tmux is present
 if which tmux > /dev/null
   set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
 
@@ -57,4 +57,11 @@ if which rbenv > /dev/null
   set PATH $HOME/.rbenv/bin $PATH
   set PATH $HOME/.rbenv/shims $PATH
   rbenv rehash >/dev/null ^&1
+end
+
+# Load thefuck, if present
+if which thefuck > /dev/null
+  function fuck
+    eval (thefuck $history[2])
+  end
 end
