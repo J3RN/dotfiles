@@ -22,3 +22,9 @@ for key in "${(@k)special_files}"; do
   green_print "Linking $pwd/$key to ${special_files[$key]}"
   ln -si "$pwd/$key" "${special_files[$key]}"
 done
+
+# If fish is present, install oh-my-fish
+if which fish > /dev/null && [[ ! -e ~/.oh-my-fish ]]; then
+  green_print "Installing oh-my-fish"
+  curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
+fi
