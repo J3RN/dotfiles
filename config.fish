@@ -4,17 +4,14 @@ set fish_path $HOME/.oh-my-fish
 # Theme
 set fish_theme bobthefish
 
-# Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
-
 # Load Plugins
 set fish_plugins git rails emoji-clock extract vi-mode
 
 # Load aliases
-. ~/.fish_aliases
+source ~/.fish_aliases
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $fish_path/oh-my-fish.fish
 
 # OSX only items
 if uname | grep "Darwin" > /dev/null
@@ -43,15 +40,6 @@ if test -s ~/.nvm-fish/nvm.fish
   nvm use 0.10 > /dev/null
 end
 
-# Print out running Tmux sessions, if tmux is present
-if which tmux > /dev/null
-  set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
-
-  if [ $sessions ]
-    echo "Sessions: $sessions"
-  end
-end
-
 # Load rbenv
 if which rbenv > /dev/null
   set PATH $HOME/.rbenv/bin $PATH
@@ -63,5 +51,25 @@ end
 if which thefuck > /dev/null
   function fuck
     eval (thefuck $history[2])
+  end
+end
+
+# Welcome message
+function fish_greeting
+  echo "       _______ ____  _   __"
+  echo "      / /__  // __ \\/ | / / "
+  echo " __  / / /_ </ /_/ /  |/ /  "
+  echo "/ /_/ /___/ / _, _/ /|  /  "
+  echo "\\____//____/_/ |_/_/ |_/   "
+  echo
+
+  # Print out running Tmux sessions, if tmux is present
+  if which tmux > /dev/null
+    set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
+
+    if [ $sessions ]
+      echo "Sessions: $sessions"
+      echo
+    end
   end
 end
