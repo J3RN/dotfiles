@@ -6,11 +6,8 @@ alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
 ## For Work
-alias prj="cd ~/workspace/work/quote-builder; and tmux new -s work"
 alias sp="sudo systemctl start postgresql"
 alias ap="RAILS_ENV=production bundle exec rake assets:precompile"
-alias qb-dev-restore="pg_restore --verbose --clean --no-acl --no-owner -h localhost -U jonathan -d qb_development latest.dump"
-alias log="ruby ~/workspace/ruby/logger/log.rb"
 
 ## Git
 alias co="git checkout"
@@ -42,9 +39,6 @@ alias pubr="git pull git@github.com:j3rn/quote-builder"
 
 ## For OSU
 alias ssh-cse="ssh -X arnettj@stdlinux.cse.ohio-state.edu"
-alias mount-cse="sshfs arnettj@stdlinux.cse.ohio-state.edu:/home/6/arnettj ~/workspace/School/Mount"
-alias unmount-cse="fusermount -uz ~/workspace/School/Mount"
-alias resnet="python2 ~/workspace/python/OSU-ResNet-Login/resnet.py"
 
 ## For Mistakes
 alias c="clear"
@@ -66,25 +60,30 @@ alias tn="tmux new -s"
 
 ## For Package management
 # Paktahn version
-#alias install="paktahn -S"
-#alias update="paktahn -Syu --aur"
-#alias remove="pak -R"
+# alias install="paktahn -S"
+# alias update="paktahn -Syu --aur"
+# alias remove="pak -R"
 ## Yaourt version
-alias install="yaourt -S"
-alias update="yaourt -Sau"
-alias remove="yaourt -R"
-# Pacman version
-#alias install="sudo pacman -S"
-#alias update="pacman -Syu"
-#alias remove="pacman -R"
-# Apt version
-#alias install="sudo apt-get install"
-#alias update="sudo apt-get update && sudo apt-get upgrade"
-#alias remove="sudo apt-get remove"
+# alias install="yaourt -S"
+# alias update="yaourt -Sau"
+# alias remove="yaourt -R"
+## Pacman version
+# alias install="sudo pacman -S"
+# alias update="pacman -Syu"
+# alias remove="pacman -R"
+## Apt version
+# alias install="sudo apt-get install"
+# alias update="sudo apt-get update && sudo apt-get upgrade"
+# alias remove="sudo apt-get remove"
+## Homebrew version
+alias install="brew install"
+alias update="brew upgrade"
+alias remove="brew uninstall"
 
 ## For server stuff
 alias j3rn-serv="ssh jthrrnco@j3rn.com"
 alias mine-serv="ssh j3rn@minecraft.j3rn.com"
 
+## Miscellaneous
 alias ls="ls -1G"
-#alias grep="grep -Rn"
+alias be="bundle exec"
