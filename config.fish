@@ -26,7 +26,9 @@ if uname | grep "Darwin" > /dev/null
 end
 
 # Add Heroku to PATH (Linux)
-#set PATH "/usr/local/heroku/bin" $PATH
+if test -e /usr/local/heroku/bin
+  set PATH "/usr/local/heroku/bin" $PATH
+end
 
 # Set editor to VIM
 set -x EDITOR vim
@@ -37,7 +39,7 @@ set GOPATH ~/.gocode
 # Set node development environment (can be read without being exported?)
 set NODE_ENV development
 
-# Load NVM
+# Load NVM, if you've got it
 if test -s ~/.nvm-fish/nvm.fish
   source ~/.nvm-fish/nvm.fish
   nvm use 0.10 > /dev/null
