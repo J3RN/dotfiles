@@ -1,17 +1,20 @@
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+# If you have Oh My Fish...
+if test -e "$HOME/.oh-my-fish"
+  # Define the path to your oh-my-fish.
+  set fish_path $HOME/.oh-my-fish
 
-# Theme
-set fish_theme bobthefish
+  # Theme
+  set fish_theme bobthefish
 
-# Load Plugins
-set fish_plugins git rails emoji-clock extract vi-mode
+  # Load Plugins
+  set fish_plugins git rails emoji-clock extract vi-mode
 
-# Load aliases
-source ~/.fish_aliases
+  # Load aliases
+  source ~/.fish_aliases
 
-# Load oh-my-fish configuration.
-source $fish_path/oh-my-fish.fish
+  # Load oh-my-fish configuration.
+  source $fish_path/oh-my-fish.fish
+end
 
 # OSX only items
 if uname | grep "Darwin" > /dev/null
