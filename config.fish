@@ -56,7 +56,13 @@ end
 if which thefuck > /dev/null
   function fuck
     eval (thefuck $history[2])
-  end
+end
+end
+
+# My custom keybindings
+function fish_user_key_bindings
+  # Fish autocompletions are really good. Trust me.
+  bind \t accept-autosuggestion
 end
 
 # Welcome message
@@ -75,6 +81,6 @@ function fish_greeting
     if [ $sessions ]
       echo "Sessions: $sessions"
       echo
-    end
   end
+end
 end
