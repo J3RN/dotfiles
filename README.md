@@ -4,14 +4,9 @@ A bunch of my arbitrary sorta-interesting dotfiles
 
 ## Requirements
 
-This has been tested on OSX 10.10 and Ubuntu 15.04. I make no guarantees about other systems.
+This has been tested on OS X 10.10 and Ubuntu 15.04. I make no guarantees about other systems.
 
-You don't technically need `fish` or `zsh`, but your experience will be better if you use one or the other.
-
-To change your shell to `zsh`, do
-```bash
-chsh /bin/zsh
-```
+You don't technically need `fish`, but your experience will be better if you use it.
 
 To change your shell to `fish`, you will probably first need to install it
 ```bash
@@ -28,6 +23,9 @@ If other things seems to be required, please open an issue and I will address th
 
 ## Installation
 
+First, you will need `zsh`. If `which zsh` does not spit out a path to `zsh`, you will need to install it.
+
+Once you've done that, run
 ```bash
 ./install.sh
 ```
