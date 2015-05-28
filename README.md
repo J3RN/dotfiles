@@ -19,9 +19,9 @@ sudo apt-get install fish # Install fish, Ubuntu/Debian
 brew install fish         # Install fish, OS X with Homebrew
 ```
 
-Then set your shell to fish
+Then set your shell to `fish`
 ```bash
-chsh /usr/local/bin/fish  # Set your shell to fish
+chsh /usr/local/bin/fish
 ```
 
 If other things seems to be required, please open an issue and I will address that.
