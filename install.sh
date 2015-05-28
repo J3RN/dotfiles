@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-files=('.bash_aliases' '.bashrc' '.fish_aliases' '.zshrc')
+files=('.bash_aliases' '.bashrc' '.fish_aliases' '.zshrc' '.tmux.conf')
 
 declare -A special_files
 special_files[config.fish]="$HOME/.config/fish/config.fish"
