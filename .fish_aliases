@@ -5,10 +5,6 @@ alias fa="vim ~/.fish_aliases"
 alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
-## For Work
-alias sp="sudo systemctl start postgresql"
-alias ap="RAILS_ENV=production bundle exec rake assets:precompile"
-
 ## Git
 alias co="git checkout"
 alias push="git push"
@@ -85,10 +81,6 @@ else if which apt > /dev/null
   alias update="sudo apt-get update; sudo apt-get upgrade"
   alias remove="sudo apt-get remove"
 end
-
-## For server stuff
-alias j3rn-serv="ssh jthrrnco@j3rn.com"
-alias mine-serv="ssh j3rn@minecraft.j3rn.com"
 
 ## Miscellaneous
 alias ls="ls -1G"
