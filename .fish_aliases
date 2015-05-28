@@ -6,35 +6,34 @@ alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
 ## Git
-alias co="git checkout"
-alias push="git push"
-alias psuh="git push"
-alias puhs="git push"
-alias pull="git pull"
-alias pullbr="git checkout --track"
-alias deploy="git push; and git push heroku master"
-alias push-u="git push -u origin "
-alias fetch="git fetch"
-alias fupst="git fetch upstream"
-alias mupm="git merge upstream/master"
-alias merge="git merge"
-alias status="git status"
-alias stat="git status"
-alias mkbr="git checkout -B"
-alias rmbr="git branch -d"
-alias lsbr="git branch -l"
-alias lsrm="git remote -v"
-alias branch="git branch"
-alias add="git add"
-alias adda="git add -A"
-alias diff="git diff"
-alias com="git commit -m"
-alias gpum="git pull upstream master"
-alias gpud="git pull upstream development"
-alias pubr="git pull git@github.com:j3rn/quote-builder"
-
-## For OSU
-alias ssh-cse="ssh -X arnettj@stdlinux.cse.ohio-state.edu"
+if which git > /dev/null
+  alias co="git checkout"
+  alias push="git push"
+  alias psuh="git push"
+  alias puhs="git push"
+  alias pull="git pull"
+  alias pullbr="git checkout --track"
+  alias deploy="git push; and git push heroku master"
+  alias push-u="git push -u origin "
+  alias fetch="git fetch"
+  alias fupst="git fetch upstream"
+  alias mupm="git merge upstream/master"
+  alias merge="git merge"
+  alias status="git status"
+  alias stat="git status"
+  alias mkbr="git checkout -B"
+  alias rmbr="git branch -d"
+  alias lsbr="git branch -l"
+  alias lsrm="git remote -v"
+  alias branch="git branch"
+  alias add="git add"
+  alias adda="git add -A"
+  alias diff="git diff"
+  alias com="git commit -m"
+  alias gpum="git pull upstream master"
+  alias gpud="git pull upstream development"
+  alias pubr="git pull git@github.com:j3rn/quote-builder"
+end
 
 ## For Mistakes
 alias c="clear"
@@ -46,13 +45,19 @@ alias ckear="clear"
 alias rkae="rake"
 
 ## For IRC
-#alias irc="weechat-curses"
-#alias weechat="weechat-curses"
+if which weechat-curses > /dev/null
+  alias irc="weechat-curses"
+  alias weechat="weechat-curses"
+else if which weechat > /dev/null
+  alias irc="weechat"
+end
 
 ## For Tmux
-alias tls="tmux list-sessions"
-alias ta="tmux attach -t"
-alias tn="tmux new -s"
+if which tmux > /dev/null
+  alias tls="tmux list-sessions"
+  alias ta="tmux attach -t"
+  alias tn="tmux new -s"
+end
 
 ## For Package management
 if which paktahn > /dev/null
@@ -85,3 +90,8 @@ end
 ## Miscellaneous
 alias ls="ls -1G"
 alias be="bundle exec"
+
+## Steam Locomotive is better with flying disaster
+if which sl > /dev/null
+  alias sl="sl -Fa"
+end
