@@ -39,6 +39,11 @@ set GOPATH ~/.gocode
 # Set node development environment (can be read without being exported?)
 set NODE_ENV development
 
+# Set HOSTNAME to http://localhost:3000
+# e.g. link_url = ENV["HOSTNAME"] + "/blarg" -> "http://localhost:3000/blarg"
+# But will be "http://mycompany.com/blarg" in production (if it's set there)
+set -x HOSTNAME "http://localhost:3000"
+
 # Load NVM, if you've got it
 if test -s ~/.nvm-fish/nvm.fish
   source ~/.nvm-fish/nvm.fish
