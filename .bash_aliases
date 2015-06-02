@@ -9,12 +9,6 @@ alias sbrc=". ~/.bashrc"
 alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
-## For Work
-alias prj="cd ~/workspace/work/quote-builder && tmux new -s work"
-alias sp="sudo systemctl start postgresql"
-alias ap="RAILS_ENV=production bundle exec rake assets:precompile"
-alias qb-dev-restore="pg_restore --verbose --clean --no-acl --no-owner -h localhost -U jonathan -d qb_development latest.dump"
-
 ## Git
 alias pr="hub pull-request"
 alias co="git checkout"
@@ -38,12 +32,6 @@ alias com="git commit -m"
 alias gpum="git pull upstream master"
 alias pubr="git pull git@github.com:j3rn/quote-builder"
 alias pull="git pull"
-
-## For OSU
-alias ssh-cse="ssh -X arnettj@stdlinux.cse.ohio-state.edu"
-alias mount-cse="sshfs arnettj@stdlinux.cse.ohio-state.edu:/home/6/arnettj ~/workspace/School/Mount"
-alias unmount-cse="fusermount -uz ~/workspace/School/Mount"
-alias resnet="python2 ~/workspace/python/OSU-ResNet-Login/resnet.py"
 
 ## For Mistakes
 alias c="clear"
@@ -81,9 +69,5 @@ alias remove="yaourt -R"
 #alias update="sudo apt-get update && sudo apt-get upgrade"
 #alias remove="sudo apt-get remove"
 
-## For server stuff
-alias j3rn-serv="ssh jthrrnco@j3rn.com"
-alias mine-serv="ssh j3rn@minecraft.j3rn.com"
-
 ## For niceity
-alias ls="ls -1"
+alias ls="ls -al"
