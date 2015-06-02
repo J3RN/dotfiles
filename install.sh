@@ -2,12 +2,12 @@
 
 link_to_home() {
   echo "Linking $1 to $HOME/$1"
-  ln -si $1 "$HOME/$1"
+  ln -si "$(pwd)/$1" "$HOME/$1"
 }
 
 link_special() {
   echo "Linking $1 to $2"
-  ln -si $1 $2
+  ln -si "$(pwd)/$1" $2
 }
 
 # Link Bash files
@@ -34,7 +34,7 @@ fi
 # Link Fish files and install oh-my-fish
 if which fish > /dev/null; then
   # Link fish config
-  link_special config.fish "$HOME/.config/fish/config.fish"
+  link_special "config.fish" "$HOME/.config/fish/config.fish"
 
   # Link fish aliases
   link_to_home .fish_aliases
