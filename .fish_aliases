@@ -88,7 +88,7 @@ else if which apt > /dev/null
 end
 
 ## Miscellaneous
-alias ls="ls -al"
+alias ls="ls -Gal"
 alias be="bundle exec"
 
 ## Steam Locomotive is better with flying disaster
