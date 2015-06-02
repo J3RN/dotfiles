@@ -44,7 +44,7 @@ export NVM_DIR="/Users/jonathan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Load rbenv
-if which rbenv > /dev/null; then
+if hash rbenv 2> /dev/null; then
   PATH="$HOME/.rbenv/bin:$PATH"
   PATH="$HOME/.rbenv/shims:$PATH"
   eval "$(rbenv init -)"
