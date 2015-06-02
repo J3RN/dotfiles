@@ -1,30 +1,47 @@
-#! /bin/zsh
+#! /bin/sh
 
-files=('.bash_aliases' '.bashrc' '.fish_aliases' '.zshrc' '.tmux.conf')
-
-declare -A special_files
-special_files[config.fish]="$HOME/.config/fish/config.fish"
-
-pwd=$(pwd)
-
-green_print() {
-  echo "\e[1;32m$1\e[0m"
+link_to_home() {
+  echo "Linking $1 to $HOME/$1"
+  ln -si $1 "$HOME/$1"
 }
 
-# Link over all home directory files
-for file in $files; do
-  green_print "Linking $pwd/$file to $HOME/$file"
-  ln -si "$pwd/$file" "$HOME/$file"
-done
+link_special() {
+  echo "Linking $1 to $2"
+  ln -si $1 $2
+}
 
-# Link over all special files
-for key in "${(@k)special_files}"; do
-  green_print "Linking $pwd/$key to ${special_files[$key]}"
-  ln -si "$pwd/$key" "${special_files[$key]}"
-done
+# Link Bash files
+if which bash > /dev/null; then
+  link_to_home .bash_aliases
+  link_to_home .bashrc
+fi
 
-# If fish is present, install oh-my-fish
-if which fish > /dev/null && [[ ! -e ~/.oh-my-fish ]]; then
-  green_print "Installing oh-my-fish"
-  curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
+# Link ZSH files
+if which zsh > /dev/null; then
+  link_to_home .zshrc
+
+  if [ ! -e "$HOME/.oh-my-zsh" ]; then
+    echo "Installing oh-my-zsh"
+    curl -L "https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh" | sh
+  fi
+fi
+
+# Link Tmux files
+if which tmux > /dev/null; then
+  link_to_home .tmux.conf
+fi
+
+# Link Fish files and install oh-my-fish
+if which fish > /dev/null; then
+  # Link fish config
+  link_special config.fish "$HOME/.config/fish/config.fish"
+
+  # Link fish aliases
+  link_to_home .fish_aliases
+
+  # Install oh-my-fish
+  if [ ! -e "$HOME/.oh-my-fish" ]; then
+    echo "Installing oh-my-fish"
+    curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
+  fi
 fi
