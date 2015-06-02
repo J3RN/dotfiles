@@ -11,13 +11,13 @@ link_special() {
 }
 
 # Link Bash files
-if which bash > /dev/null; then
+if hash bash 2> /dev/null; then
   link_to_home .bash_aliases
   link_to_home .bashrc
 fi
 
 # Link ZSH files
-if which zsh > /dev/null; then
+if hash zsh 2> /dev/null; then
   link_to_home .zshrc
 
   if [ ! -e "$HOME/.oh-my-zsh" ]; then
@@ -27,12 +27,12 @@ if which zsh > /dev/null; then
 fi
 
 # Link Tmux files
-if which tmux > /dev/null; then
+if hash tmux 2> /dev/null; then
   link_to_home .tmux.conf
 fi
 
 # Link Fish files and install oh-my-fish
-if which fish > /dev/null; then
+if hash fish 2> /dev/null; then
   # Link fish config
   link_special "config.fish" "$HOME/.config/fish/config.fish"
 
