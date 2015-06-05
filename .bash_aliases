@@ -70,4 +70,8 @@ alias remove="yaourt -R"
 #alias remove="sudo apt-get remove"
 
 ## For niceity
-alias ls="ls -al"
+if uname -a | grep "Linux" > /dev/null; then
+  alias ls="ls -U --color=auto"
+else
+  alias ls="ls -al"
+fi
