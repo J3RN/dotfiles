@@ -5,11 +5,6 @@ ZSH_THEME="agnoster"
 
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 plugins=(git rails bundler history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -35,9 +30,11 @@ fi
 export WEB_CONCURRENCY=1
 
 # Additions to the path
-PATH="/usr/local/heroku/bin:$PATH" # Add Heroku to PATH
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH" # Postgres.app
+PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"      # Postgres.app
 PATH="/Applications/Android Studio.app/sdk/platform-tools:$PATH"  # Android tools
+
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # NVM
 export NVM_DIR="/Users/jonathan/.nvm"
@@ -50,6 +47,9 @@ if hash rbenv 2> /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+# added by travis gem
+[ -f /Users/jonathan/.travis/travis.sh ] && source /Users/jonathan/.travis/travis.sh
+
 # Welcome message
 echo "       _______ ____  _   __"
 echo "      / /__  // __ \\/ | / / "
@@ -57,6 +57,3 @@ echo " __  / / /_ </ /_/ /  |/ /  "
 echo "/ /_/ /___/ / _, _/ /|  /  "
 echo "\\____//____/_/ |_/_/ |_/   "
 echo ""
-
-# added by travis gem
-[ -f /Users/jonathan/.travis/travis.sh ] && source /Users/jonathan/.travis/travis.sh
