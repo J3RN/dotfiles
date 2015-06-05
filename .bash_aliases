@@ -71,7 +71,7 @@ alias remove="yaourt -R"
 
 ## For niceity
 if uname -a | grep "Linux" > /dev/null; then
-  alias ls="ls -U --color=auto"
+  alias ls="ls -alU --color=auto"
 else
   alias ls="ls -al"
 fi
