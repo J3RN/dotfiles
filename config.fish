@@ -19,7 +19,7 @@ end
 # OSX only items
 if uname | grep "Darwin" > /dev/null
   # Add Postgres.app directory to PATH (Mac only)
-  set PATH "/Applications/Postgres93.app/Contents/MacOS/bin/" $PATH
+  set PATH "/Applications/Postgres.app/Contents/Versions/9.4/bin" $PATH
 
   # Make brew VIM higher priority
   set PATH "/usr/local/Cellar" $PATH
