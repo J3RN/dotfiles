@@ -61,7 +61,7 @@ end
 if hash thefuck 2> /dev/null
   function fuck
     eval (thefuck $history[2])
-end
+  end
 end
 
 # My custom keybindings
