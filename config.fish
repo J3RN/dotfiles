@@ -64,10 +64,11 @@ if hash thefuck 2> /dev/null
   end
 end
 
-# My custom keybindings
-function fish_user_key_bindings
-  # Fish autocompletions are really good. Trust me.
-  bind \t accept-autosuggestion
+# Custom function
+if hash pbcopy 2> /dev/null
+  function copy
+    echo $argv | pbcopy
+  end
 end
 
 # Welcome message
