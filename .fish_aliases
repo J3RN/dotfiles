@@ -88,7 +88,7 @@ else if hash apt 2> /dev/null
 end
 
 ## Miscellaneous
-alias ls="ls -Gal"
+alias ls="ls -GAl"
 alias be="bundle exec"
 
 ## Steam Locomotive is better with flying disaster
