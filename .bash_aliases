@@ -9,30 +9,6 @@ alias sbrc=". ~/.bashrc"
 alias ac="vim ~/.config/awesome/rc.lua"
 alias xmxr="xrdb -merge ~/.Xresources"
 
-## Git
-alias pr="hub pull-request"
-alias co="git checkout"
-alias push="git push"
-alias psuh="git push"
-alias deploy="git push && git push heroku"
-alias pushu="git push -u origin "
-alias fetch="git fetch"
-alias fupst="git fetch upstream"
-alias status="git status"
-alias stat="git status"
-alias mkbr="git checkout -B"
-alias rmbr="git branch -d"
-alias Rmbr="git branch -D"
-alias lsbr="git branch -l"
-alias branch="git branch"
-alias add="git add"
-alias adda="git add -A"
-alias diff="git diff"
-alias com="git commit -m"
-alias gpum="git pull upstream master"
-alias pubr="git pull git@github.com:j3rn/quote-builder"
-alias pull="git pull"
-
 ## For Mistakes
 alias c="clear"
 alias celar="clear"
@@ -71,7 +47,7 @@ alias remove="yaourt -R"
 
 ## For niceity
 if uname -a | grep "Linux" > /dev/null; then
-  alias ls="ls -alU --color=auto"
+  alias ls="ls -AlU --color=auto"
 else
   alias ls="ls -al"
 fi
