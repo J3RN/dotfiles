@@ -1,0 +1,21 @@
+[core]
+	excludesfile = /Users/jarnett/.gitignore_global
+[user]
+	name = Jonathan Arnett
+	email = jonarnett90@gmail.com
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[alias]
+	co = checkout
+	br = branch
+	mkbr = checkout -b
+	rmbr = branch -d
+	com = commit -m
+	st = status
+	pullbr = checkout --track
+	lsbr = branch -v
+	adda = add -A

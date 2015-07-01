@@ -31,6 +31,21 @@ if hash tmux 2> /dev/null; then
   link_to_home .tmux.conf
 fi
 
+# Link Git files
+if hash git 2> /dev/null; then
+  echo "You should update the name and email in '.gitconfig'. Have you done this? "
+  read input
+
+  if [[ $input == y* ]]; then
+    link_to_home .gitconfig
+    link_to_home .gitignore_global
+  elif [[ $input == n* ]]; then
+    echo "Please do so and run this again"
+  else
+    echo "Answer was not recognized. Not linking '.gitconfig'"
+  fi
+fi
+
 # Link Fish files and install oh-my-fish
 if hash fish 2> /dev/null; then
   # Link fish config
