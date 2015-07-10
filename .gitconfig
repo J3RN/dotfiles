@@ -2,7 +2,7 @@
 	excludesfile = /Users/jarnett/.gitignore_global
 [user]
 	name = Jonathan Arnett
-	email = jonarnett90@gmail.com
+	email = JArnett@covermymeds.com
 [push]
 	default = simple
 [filter "lfs"]
@@ -19,3 +19,5 @@
 	pullbr = checkout --track
 	lsbr = branch -v
 	adda = add -A
+[color]
+	ui = auto
