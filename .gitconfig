@@ -19,5 +19,6 @@
 	pullbr = checkout --track
 	lsbr = branch -v
 	adda = add -A
+  hist = log --oneline
 [color]
 	ui = auto
