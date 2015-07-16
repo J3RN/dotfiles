@@ -65,3 +65,6 @@ alias be="bundle exec"
 if hash sl 2> /dev/null
   alias sl="sl -Fa"
 end
+
+## Experimental
+alias vim=nvim
