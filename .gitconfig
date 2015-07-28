@@ -14,11 +14,12 @@
 	br = branch
 	mkbr = checkout -b
 	rmbr = branch -d
+	mvbr = branch -m
 	com = commit -m
 	st = status -s
 	pullbr = checkout --track
 	lsbr = branch -v
 	adda = add -A
-  hist = log --oneline
+	hist = log --oneline
 [color]
 	ui = auto
