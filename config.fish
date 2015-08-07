@@ -7,7 +7,7 @@ if test -e "$HOME/.oh-my-fish"
   set fish_theme bobthefish
 
   # Load Plugins
-  set fish_plugins git rails emoji-clock extract vi-mode
+  set fish_plugins git rails emoji-clock extract vi-mode rvm
 
   # Load aliases
   source ~/.fish_aliases
