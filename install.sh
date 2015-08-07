@@ -18,12 +18,12 @@ fi
 
 # Link ZSH files
 if hash zsh 2> /dev/null; then
-  link_to_home .zshrc
-
   if [ ! -e "$HOME/.oh-my-zsh" ]; then
     echo "Installing oh-my-zsh"
     curl -L "https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh" | sh
   fi
+
+  link_to_home .zshrc
 fi
 
 # Link Tmux files
@@ -48,15 +48,15 @@ fi
 
 # Link Fish files and install oh-my-fish
 if hash fish 2> /dev/null; then
-  # Link fish config
-  link_special "config.fish" "$HOME/.config/fish/config.fish"
-
-  # Link fish aliases
-  link_to_home .fish_aliases
-
   # Install oh-my-fish
   if [ ! -e "$HOME/.oh-my-fish" ]; then
     echo "Installing oh-my-fish"
     curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
   fi
+
+  # Link fish config
+  link_special "config.fish" "$HOME/.config/fish/config.fish"
+
+  # Link fish aliases
+  link_to_home .fish_aliases
 fi
