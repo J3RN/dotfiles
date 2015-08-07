@@ -60,6 +60,7 @@ end
 ## Miscellaneous
 alias ls="ls -GAl"
 alias be="bundle exec"
+alias gg="git grep -n"
 
 ## Steam Locomotive is better with flying disaster
 if hash sl 2> /dev/null
