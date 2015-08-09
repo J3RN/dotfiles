@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/jonathan/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	name = Jonathan Arnett
 	email = jonarnett90@gmail.com
