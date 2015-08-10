@@ -1,22 +1,17 @@
-# If you have Oh My Fish...
-if test -e "$HOME/.oh-my-fish"
-  # Define the path to your oh-my-fish.
+# Load Oh My Fish
+if test -e $HOME/.oh-my-fish
   set fish_path $HOME/.oh-my-fish
-
-  # Theme
   set fish_theme bobthefish
-
-  # Load Plugins
   set fish_plugins git rails emoji-clock extract vi-mode rvm
-
-  # Load aliases
-  source ~/.fish_aliases
-
-  # Load oh-my-fish configuration.
   source $fish_path/oh-my-fish.fish
 end
 
-# OSX only items
+# Source aliases
+if test -e $HOME/.fish_aliases
+  source $HOME/.fish_aliases
+end
+
+# OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
   # Add Postgres.app directory to PATH (Mac only)
   set PATH "/Applications/Postgres.app/Contents/Versions/9.4/bin" $PATH
@@ -25,28 +20,28 @@ if uname | grep "Darwin" > /dev/null
   set PATH "/usr/local/Cellar" $PATH
 end
 
-# Add Heroku to PATH (Linux)
-if test -e /usr/local/heroku/bin
-  set PATH "/usr/local/heroku/bin" $PATH
-end
-
 # Set editor to VIM
 set -x EDITOR vim
 
 # GOPATH
-set GOPATH ~/.gocode
+set GOPATH $HOME/.gocode
 
-# Set node development environment (can be read without being exported?)
-set NODE_ENV development
+# Set node development environment
+set -x NODE_ENV development
 
 # Set HOSTNAME to http://localhost:3000
 # e.g. link_url = ENV["HOSTNAME"] + "/blarg" -> "http://localhost:3000/blarg"
 # But will be "http://mycompany.com/blarg" in production (if it's set there)
 set -x HOSTNAME "http://localhost:3000"
 
-# Load NVM, if you've got it
-if test -s ~/.nvm-fish/nvm.fish
-  source ~/.nvm-fish/nvm.fish
+# Add Heroku to PATH
+if test -e /usr/local/heroku/bin
+  set PATH "/usr/local/heroku/bin" $PATH
+end
+
+# Load NVM
+if test -e $HOME/.nvm-fish/nvm.fish
+  source $HOME/.nvm-fish/nvm.fish
   nvm use 0.10 > /dev/null
 end
 
@@ -59,12 +54,10 @@ end
 
 # Load thefuck, if present
 if hash thefuck 2> /dev/null
-  function fuck
-    eval (thefuck $history[2])
-  end
+  eval (thefuck --alias)
 end
 
-# Custom function
+# Copy function
 if hash pbcopy 2> /dev/null
   function copy
     echo $argv | pbcopy
@@ -73,12 +66,10 @@ end
 
 # Welcome message
 function fish_greeting
-  echo "       _______ ____  _   __"
-  echo "      / /__  // __ \\/ | / / "
-  echo " __  / / /_ </ /_/ /  |/ /  "
-  echo "/ /_/ /___/ / _, _/ /|  /  "
-  echo "\\____//____/_/ |_/_/ |_/   "
-  echo
+  if hash figlet 2> /dev/null
+    echo $USER | tr [a-z] [A-Z] | figlet -f slant
+    echo
+  end
 
   # Print out running Tmux sessions, if tmux is present
   if hash tmux 2> /dev/null
@@ -87,6 +78,6 @@ function fish_greeting
     if [ $sessions ]
       echo "Sessions: $sessions"
       echo
+    end
   end
-end
 end
