@@ -11,20 +11,31 @@ if test -e $HOME/.fish_aliases
   source $HOME/.fish_aliases
 end
 
+# Source private additions
+if test -e $HOME/.config/fish/private.fish
+  source $HOME/.config/fish/private.fish
+end
+
+function prepend_to_path
+  if begin test -e $argv; and not contains $argv $PATH; end
+    set -x PATH $argv $PATH
+  end
+end
+
 # OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
   # Add Postgres.app directory to PATH (Mac only)
-  set PATH "/Applications/Postgres.app/Contents/Versions/9.4/bin" $PATH
+  prepend_to_path "/Applications/Postgres.app/Contents/Versions/9.4/bin"
 
   # Make brew VIM higher priority
-  set PATH "/usr/local/Cellar" $PATH
+  prepend_to_path "/usr/local/Cellar"
 end
 
 # Set editor to VIM
 set -x EDITOR vim
 
 # GOPATH
-set GOPATH $HOME/.gocode
+set -x GOPATH $HOME/.gocode
 
 # Set node development environment
 set -x NODE_ENV development
@@ -34,10 +45,8 @@ set -x NODE_ENV development
 # But will be "http://mycompany.com/blarg" in production (if it's set there)
 set -x HOSTNAME "http://localhost:3000"
 
-# Add Heroku to PATH
-if test -e /usr/local/heroku/bin
-  set PATH "/usr/local/heroku/bin" $PATH
-end
+# Load Heroku binaries
+prepend_to_path "/usr/local/heroku/bin"
 
 # Load NVM
 if test -e $HOME/.nvm-fish/nvm.fish
@@ -47,8 +56,8 @@ end
 
 # Load rbenv
 if hash rbenv 2> /dev/null
-  set PATH $HOME/.rbenv/bin $PATH
-  set PATH $HOME/.rbenv/shims $PATH
+  prepend_to_path $HOME/.rbenv/bin
+  prepend_to_path $HOME/.rbenv/shims
   rbenv rehash >/dev/null ^&1
 end
 

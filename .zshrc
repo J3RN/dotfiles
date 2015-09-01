@@ -15,6 +15,11 @@ if [ -f $HOME/.bash_aliases ]; then
   . $HOME/.bash_aliases
 fi
 
+# Source private additions
+if [ -f $HOME/.zsh-private ]; then
+  . $HOME/.bash_aliases
+fi
+
 # Linux keychain
 # eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
