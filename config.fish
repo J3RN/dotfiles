@@ -2,7 +2,7 @@
 if test -e $HOME/.oh-my-fish
   set fish_path $HOME/.oh-my-fish
   set fish_theme bobthefish
-  set fish_plugins git rails emoji-clock extract vi-mode rvm
+  set fish_plugins git rails emoji-clock extract vi-mode
   source $fish_path/oh-my-fish.fish
 end
 
