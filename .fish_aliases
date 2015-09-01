@@ -50,7 +50,7 @@ else if hash brew 2> /dev/null
   alias install="brew install"
   alias update="brew upgrade"
   alias remove="brew uninstall"
-else if hash apt 2> /dev/null
+else if hash apt-get 2> /dev/null
   # Apt version
   alias install="sudo apt-get install"
   alias update="sudo apt-get update; sudo apt-get upgrade"
