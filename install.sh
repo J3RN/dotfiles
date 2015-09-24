@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 link_to_home() {
   echo "Linking $1 to $HOME/$1"
