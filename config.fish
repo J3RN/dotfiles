@@ -7,8 +7,8 @@ if test -e $HOME/.oh-my-fish
 end
 
 # Source aliases
-if test -e $HOME/.fish_aliases
-  source $HOME/.fish_aliases
+if test -e $HOME/.config/fish/abbreviations.fish
+  source $HOME/.config/fish/abbreviations.fish
 end
 
 # Source private additions
