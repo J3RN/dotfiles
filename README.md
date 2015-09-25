@@ -6,26 +6,39 @@ A bunch of my arbitrary sorta-interesting dotfiles
 
 This has been tested on OS X 10.10 and Ubuntu 15.04. I make no guarantees about other systems.
 
-You don't technically need `fish`, but your experience will be better if you use it.
+You don't technically need `fish` or `zsh`, but your experience will be better if you use one or the other.
 
-To change your shell to `fish`, you will probably first need to install it
+To use one of these shells, you will probably first need to install it:
 ```bash
+# fish
 sudo apt-get install fish # Install fish, Ubuntu/Debian
 brew install fish         # Install fish, OS X with Homebrew
+
+# zsh
+sudo apt-get install zsh  # Install fish, Ubuntu/Debian
+# OS X comes with zsh
 ```
 
-Then set your shell to `fish`
+Then set your shell to `fish` or `zsh`:
 ```bash
-chsh /usr/local/bin/fish
+chsh /usr/local/bin/fish  # fish
+chsh /bin/zsh             # zsh
 ```
 
 If other things seems to be required, please open an issue and I will address that.
 
 ## Installation
 
-First, you will need `zsh`. If `which zsh` does not spit out a path to `zsh`, you will need to install it.
+The install script assumes that you have Bash installed. This is likely the case.
 
-Once you've done that, run
+To install, run:
 ```bash
-./install.sh
+./install
 ```
+
+If you're re-installing, or really don't care about your own dotfiles being clobbered, you can run:
+```bash
+./install -y
+```
+
+That's it! Enjoy!
