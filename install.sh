@@ -1,13 +1,25 @@
 #! /bin/bash
 
+if [[ $1 == -y ]]; then
+  yes=true
+fi
+
 link_to_home() {
   echo "Linking $1 to $HOME/$1"
-  ln -si "$(pwd)/$1" "$HOME/$1"
+  if [[ $yes == true ]]; then
+    ln -sf "$(pwd)/$1" "$HOME/$1"
+  else
+    ln -si "$(pwd)/$1" "$HOME/$1"
+  fi
 }
 
 link_special() {
   echo "Linking $1 to $2"
-  ln -si "$(pwd)/$1" $2
+  if [[ $yes == true ]]; then
+    ln -sf "$(pwd)/$1" $2
+  else
+    ln -si "$(pwd)/$1" $2
+  fi
 }
 
 
