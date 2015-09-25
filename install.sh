@@ -10,11 +10,6 @@ link_special() {
   ln -si "$(pwd)/$1" $2
 }
 
-# Link Bash files
-if hash bash 2> /dev/null; then
-  link_to_home .bash_aliases
-  link_to_home .bashrc
-fi
 
 # Link ZSH files
 if hash zsh 2> /dev/null; then
@@ -24,6 +19,7 @@ if hash zsh 2> /dev/null; then
   fi
 
   link_to_home .zshrc
+  link_to_home .aliases
 fi
 
 # Link Tmux files
