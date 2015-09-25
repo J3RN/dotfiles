@@ -10,9 +10,9 @@ fi
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-# Include bash aliases, if they exist
-if [ -f $HOME/.bash_aliases ]; then
-  . $HOME/.bash_aliases
+# Include aliases, if they exist
+if [ -f $HOME/.aliases ]; then
+  . $HOME/.aliases
 fi
 
 # Source private additions
