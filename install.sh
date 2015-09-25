@@ -54,9 +54,7 @@ if hash fish 2> /dev/null; then
     curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
   fi
 
-  # Link fish config
+  # Link fish configs
   link_special "config.fish" "$HOME/.config/fish/config.fish"
-
-  # Link fish aliases
-  link_to_home .fish_aliases
+  link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
 fi
