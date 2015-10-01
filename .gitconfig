@@ -20,7 +20,8 @@
 	pullbr = checkout --track
 	lsbr = branch -v
 	adda = add -A
-	hist = log --oneline
+	hist = log --oneline -n 5
+	lsrm = remote -v
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
@@ -29,5 +30,6 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+	pr = !hub pull-request
 [color]
 	ui = auto
