@@ -1,20 +1,27 @@
-#! /bin/sh
+#! /bin/bash
+
+if [[ $1 == -y ]]; then
+  yes=true
+fi
 
 link_to_home() {
   echo "Linking $1 to $HOME/$1"
-  ln -si "$(pwd)/$1" "$HOME/$1"
+  if [[ $yes == true ]]; then
+    ln -sf "$(pwd)/$1" "$HOME/$1"
+  else
+    ln -si "$(pwd)/$1" "$HOME/$1"
+  fi
 }
 
 link_special() {
   echo "Linking $1 to $2"
-  ln -si "$(pwd)/$1" $2
+  if [[ $yes == true ]]; then
+    ln -sf "$(pwd)/$1" $2
+  else
+    ln -si "$(pwd)/$1" $2
+  fi
 }
 
-# Link Bash files
-if hash bash 2> /dev/null; then
-  link_to_home .bash_aliases
-  link_to_home .bashrc
-fi
 
 # Link ZSH files
 if hash zsh 2> /dev/null; then
@@ -24,6 +31,7 @@ if hash zsh 2> /dev/null; then
   fi
 
   link_to_home .zshrc
+  link_to_home .aliases
 fi
 
 # Link Tmux files
@@ -54,9 +62,7 @@ if hash fish 2> /dev/null; then
     curl -L "https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish" | fish
   fi
 
-  # Link fish config
+  # Link fish configs
   link_special "config.fish" "$HOME/.config/fish/config.fish"
-
-  # Link fish aliases
-  link_to_home .fish_aliases
+  link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
 fi
