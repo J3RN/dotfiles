@@ -17,7 +17,7 @@ fi
 
 # Source private additions
 if [ -f $HOME/.zsh-private ]; then
-  . $HOME/.bash_aliases
+  . $HOME/.zsh-private
 fi
 
 # Linux keychain
