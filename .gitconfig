@@ -22,6 +22,7 @@
 	adda = add -A
 	hist = log --oneline -n 5
 	lsrm = remote -v
+	deploy = push deploy
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
