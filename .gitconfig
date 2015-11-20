@@ -20,7 +20,7 @@
 	pullbr = checkout --track
 	lsbr = branch -v
 	adda = add -A
-	hist = log --oneline -n 5
+	hist = log --oneline
 	lsrm = remote -v
 	deploy = push deploy
 	switch = !legit switch \"$@\"
@@ -32,5 +32,6 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 	pr = !hub pull-request
+	browse = !hub browse
 [color]
 	ui = auto
