@@ -53,9 +53,9 @@ elif hash apt-get 2> /dev/null; then
   alias remove="sudo apt-get remove"
 fi
 
-## For niceity
+## For better ls
 if uname -a | grep "Linux" > /dev/null; then
   alias ls="ls -AlU --color=auto"
 else
-  alias ls="ls -al"
+  alias ls="ls -GAl"
 fi
