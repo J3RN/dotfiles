@@ -48,12 +48,6 @@ set -x HOSTNAME "http://localhost:3000"
 # Load Heroku binaries
 prepend_to_path "/usr/local/heroku/bin"
 
-# Load NVM
-if test -e $HOME/.nvm-fish/nvm.fish
-  source $HOME/.nvm-fish/nvm.fish
-  nvm use 0.10 > /dev/null
-end
-
 # Load rbenv
 if hash rbenv 2> /dev/null
   prepend_to_path $HOME/.rbenv/bin
