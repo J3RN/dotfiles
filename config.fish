@@ -37,6 +37,9 @@ set -x EDITOR vim
 # GOPATH
 set -x GOPATH $HOME/.gocode
 
+# Android home (for Meteor)
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+
 # Set node development environment
 set -x NODE_ENV development
 
