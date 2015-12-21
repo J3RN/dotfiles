@@ -3,8 +3,9 @@ alias szrc=". ~/.zshrc"
 alias sbrc=". ~/.bashrc"
 
 ## For config files
-alias ac="vim ~/.config/awesome/rc.lua"
+alias ac=$EDITOR\ ~/.config/awesome/rc.lua
 alias xmxr="xrdb -merge ~/.Xresources"
+alias zshrc=$EDITOR\ ~/.zshrc
 
 ## For Mistakes
 alias c="clear"
