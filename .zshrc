@@ -86,3 +86,7 @@ if hash tmux 2> /dev/null; then
     echo
   fi
 fi
+
+# Disable output control
+# Allows me to use CTRL-s to save in Vim
+stty -ixon
