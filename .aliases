@@ -26,22 +26,32 @@ alias ta="tmux attach -t"
 alias tn="tmux new -s"
 
 ## For Package management
-# Paktahn version
-#alias install="paktahn -S"
-#alias update="paktahn -Syu --aur"
-#alias remove="pak -R"
-## Yaourt version
-alias install="yaourt -S"
-alias update="yaourt -Sau"
-alias remove="yaourt -R"
-# Pacman version
-#alias install="sudo pacman -S"
-#alias update="pacman -Syu"
-#alias remove="pacman -R"
-# Apt version
-#alias install="sudo apt-get install"
-#alias update="sudo apt-get update && sudo apt-get upgrade"
-#alias remove="sudo apt-get remove"
+if hash paktahn 2> /dev/null; then
+  # Paktahn version
+  alias install="paktahn -S"
+  alias update="paktahn -Syu --aur"
+  alias remove="pak -R"
+elif hash yaourt 2> /dev/null; then
+  # Yaourt version
+  alias install="yaourt -S"
+  alias update="yaourt -Sau"
+  alias remove="yaourt -R"
+elif hash pacman 2> /dev/null; then
+  # Pacman version
+  alias install="sudo pacman -S"
+  alias update="pacman -Syu"
+  alias remove="pacman -R"
+elif hash brew 2> /dev/null; then
+  # Homebrew version
+  alias install="brew install"
+  alias update="brew upgrade"
+  alias remove="brew uninstall"
+elif hash apt-get 2> /dev/null; then
+  # Apt version
+  alias install="sudo apt-get install"
+  alias update="sudo apt-get update; sudo apt-get upgrade"
+  alias remove="sudo apt-get remove"
+fi
 
 ## For niceity
 if uname -a | grep "Linux" > /dev/null; then
