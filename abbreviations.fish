@@ -64,6 +64,7 @@ end
 abbr_if_needed ls "ls -GAl"
 abbr_if_needed be "bundle exec"
 abbr_if_needed gg "git grep -n"
+abbr_if_needed r "r --no-save"
 
 ## Steam Locomotive is better with flying disaster
 if hash sl 2> /dev/null
