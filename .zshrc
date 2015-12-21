@@ -51,10 +51,6 @@ if [ -f "/user/local/heroku/bin" ]; then
   export PATH="/usr/local/heroku/bin:$PATH"
 fi
 
-# NVM
-export NVM_DIR="/Users/jonathan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Load rbenv
 if hash rbenv 2> /dev/null; then
   PATH="$HOME/.rbenv/bin:$PATH"
