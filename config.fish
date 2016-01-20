@@ -60,7 +60,7 @@ end
 
 # Load thefuck, if present
 if hash thefuck 2> /dev/null
-  eval (thefuck --alias)
+  eval (thefuck --alias | tr '\n' ';')
 end
 
 # Copy function
