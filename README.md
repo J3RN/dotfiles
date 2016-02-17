@@ -42,3 +42,7 @@ If you're re-installing, or really don't care about your own dotfiles being clob
 ```
 
 That's it! Enjoy!
+
+## LICENSE
+
+This is MIT Licensed. You can find the whole license in the `LICENSE` file.
