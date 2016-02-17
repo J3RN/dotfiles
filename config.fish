@@ -70,6 +70,11 @@ if hash pbcopy 2> /dev/null
   end
 end
 
+# Used to deploy with git hooks
+function deploy
+  git push deploy master
+end
+
 # Welcome message
 function fish_greeting
   if hash figlet 2> /dev/null
