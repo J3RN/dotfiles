@@ -61,7 +61,7 @@ else if hash apt-get 2> /dev/null
 end
 
 ## Miscellaneous
-abbr_if_needed ls "ls -GAl"
+abbr_if_needed ls "ls -GAlh"
 abbr_if_needed be "bundle exec"
 abbr_if_needed gg "git grep -n"
 abbr_if_needed r "r --no-save"
