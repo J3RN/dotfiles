@@ -33,12 +33,12 @@ The install script assumes that you have Bash installed. This is likely the case
 
 To install, run:
 ```bash
-./install
+./install.sh
 ```
 
 If you're re-installing, or really don't care about your own dotfiles being clobbered, you can run:
 ```bash
-./install -y
+./install.sh -y
 ```
 
 That's it! Enjoy!
