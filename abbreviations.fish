@@ -18,42 +18,42 @@ abbr_if_needed ckear "clear"
 abbr_if_needed rkae "rake"
 
 ## For IRC
-if hash weechat-curses 2> /dev/null
+if type weechat-curses ^ /dev/null > /dev/null
   abbr_if_needed irc "weechat-curses"
   abbr_if_needed weechat "weechat-curses"
-else if hash weechat 2> /dev/null
+else if type weechat ^ /dev/null > /dev/null
   abbr_if_needed irc "weechat"
 end
 
 ## For Tmux
-if hash tmux 2> /dev/null
+if type tmux ^ /dev/null > /dev/null
   abbr_if_needed tls "tmux list-sessions"
   abbr_if_needed ta "tmux attach -t"
   abbr_if_needed tn "tmux new -s"
 end
 
 ## For Package management
-if hash paktahn 2> /dev/null
+if type paktahn ^ /dev/null > /dev/null
   # Paktahn version
   abbr_if_needed install "paktahn -S"
   abbr_if_needed update "paktahn -Syu --aur"
   abbr_if_needed remove "pak -R"
-else if hash yaourt 2> /dev/null
+else if type yaourt ^ /dev/null > /dev/null
   # Yaourt version
   abbr_if_needed install "yaourt -S"
   abbr_if_needed update "yaourt -Sau"
   abbr_if_needed remove "yaourt -R"
-else if hash pacman 2> /dev/null
+else if type pacman ^ /dev/null > /dev/null
   # Pacman version
   abbr_if_needed install "sudo pacman -S"
   abbr_if_needed update "pacman -Syu"
   abbr_if_needed remove "pacman -R"
-else if hash brew 2> /dev/null
+else if type brew ^ /dev/null > /dev/null
   # Homebrew version
   abbr_if_needed install "brew install"
   abbr_if_needed update "brew upgrade"
   abbr_if_needed remove "brew uninstall"
-else if hash apt-get 2> /dev/null
+else if type apt-get ^ /dev/null > /dev/null
   # Apt version
   abbr_if_needed install "sudo apt-get install"
   abbr_if_needed update "sudo apt-get update; sudo apt-get upgrade"
@@ -67,7 +67,7 @@ abbr_if_needed gg "git grep -n"
 abbr_if_needed r "r --no-save"
 
 ## Steam Locomotive is better with flying disaster
-if hash sl 2> /dev/null
+if type sl ^ /dev/null > /dev/null
   abbr_if_needed sl "sl -Fa"
 end
 

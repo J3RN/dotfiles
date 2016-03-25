@@ -52,19 +52,19 @@ set -x HOSTNAME "http://localhost:3000"
 prepend_to_path "/usr/local/heroku/bin"
 
 # Load rbenv
-if hash rbenv 2> /dev/null
+if type rbenv ^ /dev/null > /dev/null
   prepend_to_path $HOME/.rbenv/bin
   prepend_to_path $HOME/.rbenv/shims
   rbenv rehash >/dev/null ^&1
 end
 
 # Load thefuck, if present
-if hash thefuck 2> /dev/null
+if type thefuck ^ /dev/null > /dev/null
   eval (thefuck --alias | tr '\n' ';')
 end
 
 # Copy function
-if hash pbcopy 2> /dev/null
+if type pbcopy ^ /dev/null > /dev/null
   function copy
     echo $argv | pbcopy
   end
@@ -77,13 +77,13 @@ end
 
 # Welcome message
 function fish_greeting
-  if hash figlet 2> /dev/null
+  if type figlet ^ /dev/null > /dev/null
     echo $USER | tr [a-z] [A-Z] | figlet -f slant
     echo
   end
 
   # Print out running Tmux sessions, if tmux is present
-  if hash tmux 2> /dev/null
+  if type tmux ^ /dev/null > /dev/null
     set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
 
     if [ $sessions ]
