@@ -11,7 +11,7 @@ source $OMF_PATH/init.fish
 if test -e $HOME/.oh-my-fish
   set fish_path $HOME/.oh-my-fish
   set fish_theme bobthefish
-  set fish_plugins git rails emoji-clock extract vi-mode
+  set fish_plugins git rails emoji-clock extract vi-mode nvm
   source $fish_path/oh-my-fish.fish
 end
 
