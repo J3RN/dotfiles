@@ -55,7 +55,13 @@ fi
 
 ## For better ls
 if uname -a | grep "Linux" > /dev/null; then
-  alias ls="ls -AlU --color=auto"
+  alias ls="ls -AlUh --color=auto"
 else
-  alias ls="ls -GAl"
+  alias ls="ls -GAlh"
 fi
+
+## Alias git to hub
+alias git="hub"
+
+## NeoVim
+alias vim="nvim"
