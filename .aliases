@@ -55,7 +55,7 @@ fi
 
 ## For better ls
 if uname -a | grep "Linux" > /dev/null; then
-  alias ls="ls -AlUh --color=auto"
+  alias ls="ls -Alh --color=auto"
 else
   alias ls="ls -GAlh"
 fi
