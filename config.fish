@@ -58,7 +58,9 @@ set -x NODE_ENV development
 set -x HOSTNAME "http://localhost:3000"
 
 # Load Heroku binaries
-prepend_to_path "/usr/local/heroku/bin"
+if test -e /usr/local/heroku/bin
+  prepend_to_path "/usr/local/heroku/bin"
+end
 
 # Load rbenv
 if type rbenv ^ /dev/null > /dev/null
