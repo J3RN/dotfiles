@@ -58,7 +58,7 @@ fi
 # Link Fish files and install oh-my-fish
 if type fish &> /dev/null; then
   # Install oh-my-fish
-  if [ ! -e "$HOME/.oh-my-fish" ]; then
+  if [ ! -e "$HOME/.local/share/omf" ]; then
     echo "Installing oh-my-fish"
     curl -L "https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install" | fish
   fi
