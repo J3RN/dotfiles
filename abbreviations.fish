@@ -71,4 +71,6 @@ if type sl ^ /dev/null > /dev/null
 end
 
 ## Experimental
-abbr_if_needed vim nvim
+if type nvim ^ /dev/null > /dev/null
+  abbr_if_needed vim nvim
+end
