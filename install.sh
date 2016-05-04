@@ -49,6 +49,7 @@ if type git &> /dev/null; then
     link_to_home .gitignore_global
   elif [[ $input == n* ]]; then
     echo "Please do so and run this again"
+    exit
   else
     echo "Answer was not recognized. Not linking '.gitconfig'"
   fi
