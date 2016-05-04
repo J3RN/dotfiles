@@ -64,7 +64,6 @@ end
 abbr_if_needed ls "ls -GAlh"
 abbr_if_needed be "bundle exec"
 abbr_if_needed gg "git grep -n"
-abbr_if_needed r "r --no-save"
 
 ## Steam Locomotive is better with flying disaster
 if type sl ^ /dev/null > /dev/null
