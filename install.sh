@@ -59,7 +59,7 @@ if type fish &> /dev/null; then
   # Install oh-my-fish
   if [ ! -e "$HOME/.oh-my-fish" ]; then
     echo "Installing oh-my-fish"
-    curl -L "https://github.com//oh-my-fish/raw/master/tools/install.fish" | fish
+    curl -L "https://github.com/oh-my-fish/oh-my-fish/raw/master/tools/install.fish" | fish
   fi
 
   # Link fish configs
