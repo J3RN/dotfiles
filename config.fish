@@ -34,7 +34,7 @@ end
 # OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
   # Add Postgres.app directory to PATH (Mac only)
-  prepend_to_path "/Applications/Postgres.app/Contents/Versions/9.4/bin"
+  prepend_to_path "/Applications/Postgres.app/Contents/Versions/latest/bin"
 
   # Make brew VIM higher priority
   prepend_to_path "/usr/local/Cellar"
