@@ -15,6 +15,13 @@ if test -e $HOME/.oh-my-fish
   source $fish_path/oh-my-fish.fish
 end
 
+# Utility function that does what you'd think
+function prepend_to_path
+  if begin test -e $argv; and not contains $argv $PATH; end
+    set -x PATH $argv $PATH
+  end
+end
+
 # Source aliases
 if test -e $HOME/.config/fish/abbreviations.fish
   source $HOME/.config/fish/abbreviations.fish
@@ -25,11 +32,6 @@ if test -e $HOME/.config/fish/private.fish
   source $HOME/.config/fish/private.fish
 end
 
-function prepend_to_path
-  if begin test -e $argv; and not contains $argv $PATH; end
-    set -x PATH $argv $PATH
-  end
-end
 
 # OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
