@@ -32,6 +32,10 @@ if test -e $HOME/.config/fish/private.fish
   source $HOME/.config/fish/private.fish
 end
 
+# Source work additions
+if test -e $HOME/.config/fish/work.fish
+  source $HOME/.config/fish/work.fish
+end
 
 # OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
