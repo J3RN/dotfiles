@@ -1,0 +1,8 @@
+# ~/.tmuxinator/newtab.yml
+
+name: newtab
+root: ~/workspace/web/newtab
+
+windows:
+  - editor: vim
+  - server: rerun cfx run -s "INT"

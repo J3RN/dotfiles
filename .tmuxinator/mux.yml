@@ -1,0 +1,6 @@
+name: mux
+root: ~/workspace/tmuxinator
+
+windows:
+  - editor: vim
+  - other:

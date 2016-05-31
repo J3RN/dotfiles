@@ -1,0 +1,11 @@
+name: mm
+root: ~/workspace/minecraft-manager
+
+windows:
+  - editor: vim
+  - server:
+      layout: even-vertical
+      panes:
+        - bundle exec passenger start
+        - bundle exec sidekiq
+  - logs: tail -f log/development.log

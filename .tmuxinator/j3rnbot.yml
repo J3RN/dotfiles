@@ -1,0 +1,10 @@
+# ~/.tmuxinator/j3rnbot.yml
+
+name: j3rnbot
+root: "~/workspace/j3rnbot/"
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim +:NERDTree

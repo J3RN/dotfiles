@@ -1,0 +1,5 @@
+name: plans
+root: ~/workspace/cwdg/semester-plans
+
+windows:
+  - editor: vim 2016-01/schedule.yml

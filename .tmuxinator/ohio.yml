@@ -1,0 +1,6 @@
+name: ohio
+root: ~/workspace/hackohio/ohio
+
+windows:
+  - editor: vim
+  - other:

@@ -1,0 +1,6 @@
+name: newspell
+root: ~/workspace/libircclient-1.8/newspell
+
+windows:
+  - editor: vim
+  - other:

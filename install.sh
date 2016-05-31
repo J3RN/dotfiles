@@ -67,3 +67,15 @@ if type fish &> /dev/null; then
   link_special "config.fish" "$HOME/.config/fish/config.fish"
   link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
 fi
+
+# Check for Tmuxinator
+if type tmuxinator &> /dev/null; then
+  echo "Would you like my Tmuxinator projects (you probably don't)?"
+  if [[ $input == y* ]]; then
+    link_to_home .tmuxinator
+  elif [[ $input == n* ]]; then
+    echo "Cool, I totally understand."
+  else
+    echo "Answer was not recognized. Not linking '.tmuxinator'"
+  fi
+fi

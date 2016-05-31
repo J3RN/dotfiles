@@ -1,0 +1,5 @@
+name: resume
+root: ~/workspace/résumé
+
+windows:
+  - editor: vim Arnett-Jonathan.tex

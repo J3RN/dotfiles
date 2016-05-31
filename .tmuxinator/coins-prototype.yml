@@ -1,0 +1,8 @@
+# ~/.tmuxinator/coins.yml
+
+name: coins
+root: ~/workspace/coins_prototype
+
+windows:
+  - editor: vim
+  - gulp: gulp

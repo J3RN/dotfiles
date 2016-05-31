@@ -1,0 +1,6 @@
+name: spellrb
+root: ~/workspace/spellrb
+
+windows:
+  - editor: vim
+  - rspec: rerun -d lib -d bin -d spec rake

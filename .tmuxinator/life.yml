@@ -1,0 +1,6 @@
+name: life
+root: ~/workspace/life
+
+windows:
+  - editor: vim
+  - other:

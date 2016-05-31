@@ -1,0 +1,11 @@
+name: spell
+root: ~/workspace/spell
+
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - vim
+        -
+  - redis: redis-server
+
