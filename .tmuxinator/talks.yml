@@ -1,0 +1,6 @@
+name: <%= args[0] %>
+root: ~/workspace/talks/<%= args[0] %>
+
+windows:
+  - editor: vim
+  - other: grunt serve

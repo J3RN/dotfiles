@@ -1,0 +1,6 @@
+name: rateathon
+root: ~/workspace/rateathon
+
+windows:
+  - editor: vim
+  - server: bundle exec rails server

@@ -1,0 +1,7 @@
+name: coins
+root: ~/workspace/coins
+
+windows:
+  - editor: vim
+  - server: bundle exec guard
+  - logs: tail -f log/development.log

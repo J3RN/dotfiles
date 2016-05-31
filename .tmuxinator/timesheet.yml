@@ -1,0 +1,6 @@
+name: timesheet
+root: ~/workspace/timesheet
+
+windows:
+  - editor: vim
+  - server: bundle exec passenger start

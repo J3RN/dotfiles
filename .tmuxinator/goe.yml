@@ -1,0 +1,6 @@
+name: goe
+root: ~/workspace/game-of-evolution
+
+windows:
+  - editor: vim
+  - other:

@@ -1,0 +1,5 @@
+name: pigeon
+root: ~/workspace/pigeon
+windows:
+  - editor: vim
+  - other:
