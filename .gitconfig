@@ -3,6 +3,7 @@
 [user]
 	name = Jonathan Arnett
 	email = jonarnett90@gmail.com
+	signingkey = 107E89E8
 [push]
 	default = simple
 [filter "lfs"]
@@ -15,7 +16,7 @@
 	mkbr = checkout -b
 	rmbr = branch -d
 	mvbr = branch -m
-	com = commit -m
+	com = commit -S -m
 	st = status -s
 	pullbr = checkout --track
 	lsbr = branch -a
@@ -35,3 +36,5 @@
 	browse = !hub browse
 [color]
 	ui = auto
+[commit]
+	gpgSign = true
