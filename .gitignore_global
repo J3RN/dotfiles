@@ -7,3 +7,5 @@
 
 # Ruby versions (just trust me)
 .ruby-version
+
+.DS_Store
