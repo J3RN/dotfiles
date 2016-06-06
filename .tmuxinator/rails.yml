@@ -1,0 +1,7 @@
+name: <%= @args[0] %>
+root: ~/Workspace/<%= @args[0] %>
+
+windows:
+  - editor: vim
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

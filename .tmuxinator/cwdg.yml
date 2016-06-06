@@ -1,8 +1,0 @@
-name: cwdg
-root: "~/workspace/cwdg/cwdg.github.io"
-
-windows:
-  - editor: vim
-  - server:
-    - vagrant up; and vagrant ssh
-    - middleman server

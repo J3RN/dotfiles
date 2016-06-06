@@ -1,6 +1,0 @@
-name: sadface
-root: ~/workspace/sadface
-
-windows:
-  - editor: vim
-  - other:

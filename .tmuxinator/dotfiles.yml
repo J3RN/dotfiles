@@ -1,5 +1,0 @@
-name: dotfiles
-root: ~/workspace/dotfiles
-
-windows:
-  - editor: vim +:NERDTree
