@@ -1,6 +1,0 @@
-name: net
-root: ~/workspace/net
-
-windows:
-  - editor: vim
-  - other:

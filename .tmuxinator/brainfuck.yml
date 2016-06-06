@@ -1,6 +1,0 @@
-name: brainfuck
-root: ~/workspace/brainfuck
-
-windows:
-  - editor: vim
-  - compiling:

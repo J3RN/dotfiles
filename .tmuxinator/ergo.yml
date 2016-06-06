@@ -1,5 +1,0 @@
-name: ergo
-root: ~/workspace/qmk_firmware/keyboard/ergodox_ez
-windows:
-  - editor: vim keymaps/j3rn/keymap.c
-  - programmer:

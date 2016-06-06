@@ -1,5 +1,0 @@
-name: vimrc
-root: ~/workspace/vim-config
-
-windows:
-  - editor: vim .vimrc

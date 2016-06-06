@@ -1,10 +1,5 @@
-# ~/.tmuxinator/irc.yml
-
 name: irc
-root: "~/"
+root: ~/
 
 windows:
-  - main:
-      layout: main-horizontal
-      panes:
-        - vim +qall; weechat
+  - editor: vim +qall; and weechat
