@@ -72,11 +72,6 @@ set -x ANDROID_HOME $HOME/Library/Android/sdk
 # Set node development environment
 set -x NODE_ENV development
 
-# Set HOSTNAME to http://localhost:3000
-# e.g. link_url = ENV["HOSTNAME"] + "/blarg" -> "http://localhost:3000/blarg"
-# But will be "http://mycompany.com/blarg" in production (if it's set there)
-set -x HOSTNAME "http://localhost:3000"
-
 # Load Heroku binaries
 if test -e /usr/local/heroku/bin
   prepend_to_path "/usr/local/heroku/bin"
