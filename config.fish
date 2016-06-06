@@ -49,6 +49,9 @@ if uname | grep "Darwin" > /dev/null
 
   # Make brew VIM higher priority
   prepend_to_path "/usr/local/Cellar"
+
+  # LaTeX tools
+  prepend_to_path "/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin"
 end
 
 # Set editor to a version of Vi (Neovim has highest preference)
