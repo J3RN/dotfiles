@@ -22,6 +22,11 @@ function prepend_to_path
   end
 end
 
+# Utility function to check if a program is installed
+function installed
+  type $argv ^ /dev/null > /dev/null
+end
+
 # Source aliases
 if test -e $HOME/.config/fish/abbreviations.fish
   source $HOME/.config/fish/abbreviations.fish
@@ -46,8 +51,14 @@ if uname | grep "Darwin" > /dev/null
   prepend_to_path "/usr/local/Cellar"
 end
 
-# Set editor to VIM
-set -x EDITOR vim
+# Set editor to a version of Vi (Neovim has highest preference)
+if installed nvim
+  set -x EDITOR nvim
+else if installed vim
+  set -x EDITOR vim
+else
+  set -x EDITOR vi
+end
 
 # GOPATH
 set -x GOPATH $HOME/.gocode
@@ -69,19 +80,19 @@ if test -e /usr/local/heroku/bin
 end
 
 # Load rbenv
-if type rbenv ^ /dev/null > /dev/null
+if test -e $HOME/.rbenv
   prepend_to_path $HOME/.rbenv/bin
   prepend_to_path $HOME/.rbenv/shims
   rbenv rehash >/dev/null ^&1
 end
 
 # Load thefuck, if present
-if type thefuck ^ /dev/null > /dev/null
+if installed thefuck
   eval (thefuck --alias | tr '\n' ';')
 end
 
 # Copy function
-if type pbcopy ^ /dev/null > /dev/null
+if installed pbcopy
   function copy
     echo $argv | pbcopy
   end
@@ -94,13 +105,13 @@ end
 
 # Welcome message
 function fish_greeting
-  if type figlet ^ /dev/null > /dev/null
-    echo $USER | tr [a-z] [A-Z] | figlet -f slant
+  if installed figlet
+    echo "J3RN" | tr [a-z] [A-Z] | figlet -f slant
     echo
   end
 
   # Print out running Tmux sessions, if tmux is present
-  if type tmux ^ /dev/null > /dev/null
+  if installed tmux
     set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
 
     if [ $sessions ]
