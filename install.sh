@@ -71,6 +71,8 @@ fi
 # Check for Tmuxinator
 if type tmuxinator &> /dev/null; then
   echo "Would you like my Tmuxinator projects (you probably don't)?"
+  read input
+
   if [[ $input == y* ]]; then
     link_to_home .tmuxinator
   elif [[ $input == n* ]]; then
