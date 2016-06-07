@@ -22,6 +22,23 @@ link_special() {
   fi
 }
 
+yes_or_ask() {
+  if [[ $yes == true ]]; then
+    return 0
+  fi
+
+  echo $1
+  read input
+  if [[ $input == y* ]]; then
+    return 0
+  elif [[ $input == n* ]]; then
+    echo $2
+  else
+    echo "Answer not recognized, skipping..."
+  fi
+
+  return 1
+}
 
 # Link ZSH files
 if type zsh &> /dev/null; then
@@ -41,18 +58,11 @@ fi
 
 # Link Git files
 if type git &> /dev/null; then
-  echo "You should update the name and email in '.gitconfig'. Have you done this? "
-  read input
-
-  if [[ $input == y* ]]; then
+  if yes_or_ask "You should update the name and email in '.gitconfig'. Have you done this? " "Please do so and run this again"; then
     link_to_home .gitconfig
-    link_to_home .gitignore_global
-  elif [[ $input == n* ]]; then
-    echo "Please do so and run this again"
-    exit
-  else
-    echo "Answer was not recognized. Not linking '.gitconfig'"
   fi
+
+  link_to_home .gitignore_global
 fi
 
 # Link Fish files and install oh-my-fish
@@ -68,16 +78,9 @@ if type fish &> /dev/null; then
   link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
 fi
 
-# Check for Tmuxinator
+# Link Tmuxinator files
 if type tmuxinator &> /dev/null; then
-  echo "Would you like my Tmuxinator projects (you probably don't)?"
-  read input
-
-  if [[ $input == y* ]]; then
+  if yes_or_ask "Would you like my Tmuxinator projects (you probably don't)?" "Cool, I totally understand."; then
     link_to_home .tmuxinator
-  elif [[ $input == n* ]]; then
-    echo "Cool, I totally understand."
-  else
-    echo "Answer was not recognized. Not linking '.tmuxinator'"
   fi
 fi
