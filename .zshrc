@@ -26,7 +26,7 @@ fi
 # OSX only PATH additions
 if [ uname = "Darwin" ]; then
   # Postgres.app
-  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
   # Homebrew
   export PATH="/usr/local/Cellar:$PATH"
