@@ -54,6 +54,7 @@ fi
 # Link Tmux files
 if type tmux &> /dev/null; then
   link_to_home .tmux.conf
+  link_to_home .tmux
 fi
 
 # Link Git files
