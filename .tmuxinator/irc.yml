@@ -2,4 +2,4 @@ name: irc
 root: ~/
 
 windows:
-  - editor: vim +qall; and weechat
+  - irc: weechat
