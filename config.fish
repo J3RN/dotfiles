@@ -47,7 +47,7 @@ set work_config $HOME/.config/fish/work.fish
 source_if_exists $work_config
 
 # OSX only PATH additions
-if uname | grep "Darwin" > /dev/null
+if uname | grep -q "Darwin"
   # Add Postgres.app directory to PATH (Mac only)
   prepend_to_path "/Applications/Postgres.app/Contents/Versions/latest/bin"
 
