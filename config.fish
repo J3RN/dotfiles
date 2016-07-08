@@ -51,7 +51,7 @@ if uname | grep -q "Darwin"
   # Add Postgres.app directory to PATH (Mac only)
   prepend_to_path "/Applications/Postgres.app/Contents/Versions/latest/bin"
 
-  # Make brew VIM higher priority
+  # Make Homebrew installs higher priority
   prepend_to_path "/usr/local/Cellar"
 
   # LaTeX tools
