@@ -63,7 +63,7 @@ else
   set -x EDITOR vi
 end
 
-# GOPATH
+# Set GOPATH for Go development
 set -x GOPATH $HOME/.gocode
 
 # Android home (for Meteor)
