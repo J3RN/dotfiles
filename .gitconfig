@@ -19,7 +19,7 @@
 	com = commit -S -m
 	st = status -s
 	pullbr = checkout --track
-	lsbr = branch -a
+	lsbr = branch
 	adda = add -A
 	hist = log --oneline
 	lsrm = remote -v
