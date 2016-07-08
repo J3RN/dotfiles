@@ -22,25 +22,29 @@ function prepend_to_path
   end
 end
 
+# Utility function to source file if it exists
+function source_if_exists
+  if test -e $argv
+    source $argv
+  end
+end
+
 # Utility function to check if a program is installed
 function installed
   type $argv ^ /dev/null > /dev/null
 end
 
 # Source aliases
-if test -e $HOME/.config/fish/abbreviations.fish
-  source $HOME/.config/fish/abbreviations.fish
-end
+set abbr_config $HOME/.config/fish/abbreviations.fish
+source_if_exists $abbr_config
 
 # Source private additions
-if test -e $HOME/.config/fish/private.fish
-  source $HOME/.config/fish/private.fish
-end
+set private_config $HOME/.config/fish/private.fish
+source_if_exists $private_config
 
 # Source work additions
-if test -e $HOME/.config/fish/work.fish
-  source $HOME/.config/fish/work.fish
-end
+set work_config $HOME/.config/fish/work.fish
+source_if_exists $work_config
 
 # OSX only PATH additions
 if uname | grep "Darwin" > /dev/null
@@ -73,9 +77,7 @@ set -x ANDROID_HOME $HOME/Library/Android/sdk
 set -x NODE_ENV development
 
 # Load Heroku binaries
-if test -e /usr/local/heroku/bin
-  prepend_to_path "/usr/local/heroku/bin"
-end
+prepend_to_path "/usr/local/heroku/bin"
 
 # Load rbenv
 if test -e $HOME/.rbenv
