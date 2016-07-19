@@ -74,8 +74,7 @@ prepend_to_path "/usr/local/heroku/bin"
 # Load rbenv
 if test -e $HOME/.rbenv
   prepend_to_path $HOME/.rbenv/bin
-  prepend_to_path $HOME/.rbenv/shims
-  rbenv rehash >/dev/null ^&1
+  status --is-interactive; and . (rbenv init -|psub)
 end
 
 # Load thefuck, if present
