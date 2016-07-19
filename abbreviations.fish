@@ -10,6 +10,7 @@ abbr clar clear
 abbr claer clear
 abbr ckear clear
 abbr rkae rake
+abbr rials rails
 
 ## For IRC
 if type weechat-curses ^ /dev/null > /dev/null
