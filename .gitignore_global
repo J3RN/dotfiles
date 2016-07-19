@@ -8,4 +8,5 @@
 # Ruby versions (just trust me)
 .ruby-version
 
+# Stupid Finder files
 .DS_Store
