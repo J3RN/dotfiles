@@ -3,13 +3,13 @@ abbr ac "vim ~/.config/awesome/rc.lua"
 abbr xmxr "xrdb -merge ~/.Xresources"
 
 ## For Mistakes
-abbr c "clear"
-abbr celar "clear"
-abbr clea "clear"
-abbr clar "clear"
-abbr claer "clear"
-abbr ckear "clear"
-abbr rkae "rake"
+abbr c clear
+abbr celar clear
+abbr clea clear
+abbr clar clear
+abbr claer clear
+abbr ckear clear
+abbr rkae rake
 
 ## For IRC
 if type weechat-curses ^ /dev/null > /dev/null
