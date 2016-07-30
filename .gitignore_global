@@ -2,6 +2,9 @@
 *.swp
 *.swo
 
+# Emacs files
+\#*\#
+
 # Packaged gems
 *.gem
 
