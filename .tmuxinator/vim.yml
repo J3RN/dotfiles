@@ -1,3 +1,8 @@
+<% dir = "~/Workspace/#{@args[0]}" %>
+<% unless Dir.exists? dir %>
+  <% `git clone git@github.com:#{ENV["GITHUB_USER"]}/#{@args[0]} #{dir}` %>
+<% end %>
+
 name: <%= @args[0] %>
 root: ~/Workspace/<%= @args[0] %>
 
