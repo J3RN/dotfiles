@@ -4,6 +4,7 @@
 
 # Emacs files
 \#*\#
+*~
 
 # Packaged gems
 *.gem
