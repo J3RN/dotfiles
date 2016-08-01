@@ -85,3 +85,8 @@ if type tmuxinator &> /dev/null; then
     link_to_home .tmuxinator
   fi
 fi
+
+# Link Emacs files
+if type emacs &> /dev/null; then
+  link_to_home .emacs
+fi
