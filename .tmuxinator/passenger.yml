@@ -2,5 +2,5 @@ name: <%= @args[0] %>
 root: ~/Workspace/<%= @args[0] %>
 
 windows:
-  - editor: vim
+  - editor: eval $EDITOR
   - server: passenger start
