@@ -2,5 +2,5 @@ name: mux
 root: ~/Workspace/tmuxinator/
 
 windows:
-  - editor: vim
+  - editor: eval $EDITOR
   - tests: bundle exec rspec
