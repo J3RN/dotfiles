@@ -55,6 +55,14 @@ else if type apt-get ^ /dev/null > /dev/null
   abbr remove "sudo apt-get remove"
 end
 
+## Rails stuff
+if type rails ^ /dev/null > /dev/null
+  abbr rc "rails console"
+  abbr rs "rails server"
+  abbr rr "rails runner"
+  abbr rg "rails generate"
+end
+
 ## Miscellaneous
 abbr ls "ls -GAlh"
 abbr be "bundle exec"
