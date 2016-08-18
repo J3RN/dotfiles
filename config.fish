@@ -50,8 +50,11 @@ if uname | grep -q "Darwin"
   prepend_to_path "/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin"
 end
 
-# Set editor to a version of Vi (Neovim has highest preference)
-if installed nvim
+# Set editor to Emacs, if available
+# Else, set it to a version of Vi
+if installed emacs
+  set -x EDITOR "emacs -nw"
+else if installed nvim
   set -x EDITOR nvim
 else if installed vim
   set -x EDITOR vim
