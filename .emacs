@@ -14,6 +14,12 @@
 ;;; Key bindings
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-c r") 'overwrite-mode)
+;; Enable shift-arrow keybindings for window movement
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+;; *Unbind* C-z (suspend)
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
 
 ;;; Display items
 ;; Do not wrap long lines
