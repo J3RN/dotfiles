@@ -48,6 +48,9 @@ if uname | grep -q "Darwin"
 
   # LaTeX tools
   prepend_to_path "/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin"
+
+  # Special path modification for pgp without the 1 suffix
+  prepend_to_path "/usr/local/opt/gnupg/libexec/gpgbin"
 end
 
 # Set editor to Emacs, if available
