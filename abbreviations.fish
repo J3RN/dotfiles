@@ -73,7 +73,5 @@ if type sl ^ /dev/null > /dev/null
   abbr sl "sl -Fa"
 end
 
-## Experimental
-# if type nvim ^ /dev/null > /dev/null
-#   abbr vim nvim
-# end
+## Easier access to terminal emacs
+abbr ew "emacs -nw"
