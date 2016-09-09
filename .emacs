@@ -14,6 +14,8 @@
 ;;; Key bindings
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-c r") 'overwrite-mode)
+(global-set-key (kbd "C-c t") (lambda () (interactive) (eshell 'n)))
+(global-set-key (kbd "C-c d") 'delete-trailing-whitespace)
 ;; Enable shift-arrow keybindings for window movement
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
