@@ -53,9 +53,11 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; Hooks
+;; Load Projectile-Rails with Projectile
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;;; Auto-mode adjustments
+;; Treat SCSS as CSS
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 
 ;;; Themes
