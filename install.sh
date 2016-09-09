@@ -89,4 +89,5 @@ fi
 # Link Emacs files
 if type emacs &> /dev/null; then
   link_to_home .emacs
+  link_to_home .emacs.d
 fi
