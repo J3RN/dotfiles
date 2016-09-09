@@ -53,7 +53,6 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; Hooks
-(add-hook 'yaml-mode 'auto-complete-mode)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;;; Auto-mode adjustments
