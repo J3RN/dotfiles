@@ -36,8 +36,6 @@
 ;;; Global modes
 ;; Line numbers
 (global-linum-mode 1)
-;; Autocomplete mode
-(global-auto-complete-mode 1)
 ;; Projectile
 (projectile-global-mode)
 
