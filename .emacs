@@ -26,8 +26,8 @@
 ;;; Display items
 ;; Do not wrap long lines
 (setq-default truncate-lines t)
-;; Show trailing whitespace
-(setq-default show-trailing-whitespace t)
+;; Show trailing whitespace in code files
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
 ;;; Better formatting of files
 ;; Require newlines at the end of files
