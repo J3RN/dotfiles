@@ -17,3 +17,6 @@
 
 # Personal notes and such
 me/
+
+# Passenger logs
+passenger.3000.log
