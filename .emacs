@@ -11,6 +11,7 @@
 ;;; Package configuration
 ;; Initialize exec-path-from-shell
 (exec-path-from-shell-initialize)
+;; Autocomplete never ignores case
 (setq ac-ignore-case nil)
 
 ;;; Key bindings
