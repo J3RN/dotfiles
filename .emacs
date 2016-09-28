@@ -19,6 +19,8 @@
 (global-set-key (kbd "C-c r") 'overwrite-mode)
 (global-set-key (kbd "C-c t") (lambda () (interactive) (eshell 'n)))
 (global-set-key (kbd "C-c d") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-c c") 'compile)
+(global-set-key (kbd "C-c e") 'recompile)
 ;; Enable shift-arrow keybindings for window movement
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
