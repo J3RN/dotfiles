@@ -9,6 +9,8 @@
 (package-initialize)
 
 ;;; Package configuration
+;; Initialize exec-path-from-shell
+(exec-path-from-shell-initialize)
 (setq ac-ignore-case nil)
 
 ;;; Key bindings
@@ -38,9 +40,6 @@
 (global-linum-mode 1)
 ;; Projectile
 (projectile-global-mode)
-
-;;; Plugin initialization
-(exec-path-from-shell-initialize)
 
 ;;; GUI Emacs
 ;; Disable toolbar
