@@ -55,8 +55,17 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; Hooks
-;; Load Projectile-Rails with Projectile
+;; Projectile
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+;; Doc View
+(add-hook 'doc-view-mode-hook 'auto-revert-mode)
+;; ERC
+(add-hook 'erc-mode-hook 'visual-line-mode)
+;; TeX
+(add-hook 'tex-mode-hook 'flyspell-mode)
+(add-hook 'tex-mode-hook 'visual-line-mode)
+;; WebMode
+(add-hook 'html-mode-hook 'web-mode)
 
 ;;; Auto-mode adjustments
 ;; Treat SCSS as CSS
