@@ -102,11 +102,6 @@ end
 
 # Welcome message
 function fish_greeting
-  if installed figlet
-    echo "J3RN" | tr [a-z] [A-Z] | figlet -f slant
-    echo
-  end
-
   # Print out running Tmux sessions, if tmux is present
   if installed tmux
     set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
