@@ -72,11 +72,6 @@ if hash pbcopy 2> /dev/null; then
 fi
 
 # Welcome message
-if hash figlet 2> /dev/null; then
-  echo $USER | tr "[a-z]" "[A-Z]" | figlet -f slant
-  echo
-fi
-
 # Print out running Tmux sessions, if tmux is present
 if hash tmux 2> /dev/null; then
   sessions=$(tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
