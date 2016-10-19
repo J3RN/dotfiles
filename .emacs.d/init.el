@@ -64,12 +64,15 @@
 ;; TeX
 (add-hook 'tex-mode-hook 'flyspell-mode)
 (add-hook 'tex-mode-hook 'visual-line-mode)
-;; WebMode
-(add-hook 'html-mode-hook 'web-mode)
 
 ;;; Auto-mode adjustments
 ;; Treat SCSS as CSS
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+;; Web-mode for web files
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)) ; HTML
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))   ; PHP
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))   ; Handlebars
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))   ; ERB
 
 ;;; Themes
 ;; Custom theme path
