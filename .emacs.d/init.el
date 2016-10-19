@@ -65,6 +65,11 @@
 (add-hook 'tex-mode-hook 'flyspell-mode)
 (add-hook 'tex-mode-hook 'visual-line-mode)
 
+;;; Scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't)	 ;; scroll window under mouse
+
 ;;; Auto-mode adjustments
 ;; Treat SCSS as CSS
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
@@ -84,7 +89,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(scroll-step 1)
  '(erc-server-reconnect-attempts t)
  '(custom-enabled-themes (quote (wombat)))
  '(compilation-scroll-output t)
