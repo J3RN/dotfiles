@@ -40,9 +40,13 @@
 
 ;;; Global modes
 ;; Line numbers
-(global-linum-mode 1)
+(global-linum-mode t)
 ;; Projectile
-(projectile-global-mode)
+(projectile-mode t)
+;; Ido mode
+(ido-mode t)
+;; Flycheck mode
+(global-flycheck-mode t)
 
 ;;; GUI Emacs
 ;; Disable toolbar
