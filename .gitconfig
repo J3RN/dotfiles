@@ -3,7 +3,7 @@
 [user]
 	name = Jonathan Arnett
 	email = jonarnett90@gmail.com
-	signingkey = 107E89E8
+	signingkey = 68A91E8E3A8BD47D
 [push]
 	default = simple
 [filter "lfs"]
