@@ -1,29 +1,16 @@
 # J3RN's dotfiles
 
-A bunch of my arbitrary sorta-interesting dotfiles
+A bunch of my arbitrary sorta-interesting dotfiles.
+
+My editor configs are now located in separate repositories:
+- [Vim config](https://github.com/J3RN/vim-config)
+- [Emacs config](https://github.com/J3RN/emacs-config)
 
 ## Requirements
 
-This has been tested on OS X 10.10 and Ubuntu 15.04. I make no guarantees about other systems.
+This has been tested on macOS and Ubuntu. I make no guarantees about other systems.
 
-You don't technically need `fish` or `zsh`, but your experience will be better if you use one or the other.
-
-To use one of these shells, you will probably first need to install it:
-```bash
-# fish
-sudo apt-get install fish # Install fish, Ubuntu/Debian
-brew install fish         # Install fish, OS X with Homebrew
-
-# zsh
-sudo apt-get install zsh  # Install fish, Ubuntu/Debian
-# OS X comes with zsh
-```
-
-Then set your shell to `fish` or `zsh`:
-```bash
-chsh /usr/local/bin/fish  # fish
-chsh /bin/zsh             # zsh
-```
+The shells `fish` and `zsh` should not be hard dependencies, but your experience will be better if you use one or the other. To use one of these shells, you will probably first need to install it.
 
 If other things seems to be required, please open an issue and I will address that.
 
