@@ -26,7 +26,7 @@ end
 
 # Utility function to check if a program is installed
 function installed
-  type $argv ^ /dev/null > /dev/null
+  command --search $argv ^ /dev/null > /dev/null
 end
 
 # Source aliases
