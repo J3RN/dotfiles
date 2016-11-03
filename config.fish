@@ -54,6 +54,9 @@ if uname | grep -q "Darwin"
 
   # Special path modification for pgp without the 1 suffix
   prepend_to_path "/usr/local/opt/gnupg/libexec/gpgbin"
+
+  # Android home (for Meteor)
+  set -x ANDROID_HOME $HOME/Library/Android/sdk
 end
 
 # Set editor to Emacs, if available
@@ -70,9 +73,6 @@ end
 
 # Set GOPATH for Go development
 set -x GOPATH $HOME/.gocode
-
-# Android home (for Meteor)
-set -x ANDROID_HOME $HOME/Library/Android/sdk
 
 # Set node development environment
 set -x NODE_ENV development
