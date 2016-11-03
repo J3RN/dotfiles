@@ -13,42 +13,42 @@ abbr rkae rake
 abbr rials rails
 
 ## For IRC
-if type weechat-curses ^ /dev/null > /dev/null
+if installed weechat-curses ^ /dev/null > /dev/null
   abbr irc "weechat-curses"
   abbr weechat "weechat-curses"
-else if type weechat ^ /dev/null > /dev/null
+else if installed weechat ^ /dev/null > /dev/null
   abbr irc "weechat"
 end
 
 ## For Tmux
-if type tmux ^ /dev/null > /dev/null
+if installed tmux ^ /dev/null > /dev/null
   abbr tls "tmux list-sessions"
   abbr ta "tmux attach -t"
   abbr tn "tmux new -s"
 end
 
 ## For Package management
-if type paktahn ^ /dev/null > /dev/null
+if installed paktahn ^ /dev/null > /dev/null
   # Paktahn version
   abbr install "paktahn -S"
   abbr update "paktahn -Syu --aur"
   abbr remove "pak -R"
-else if type yaourt ^ /dev/null > /dev/null
+else if installed yaourt ^ /dev/null > /dev/null
   # Yaourt version
   abbr install "yaourt -S"
   abbr update "yaourt -Sau"
   abbr remove "yaourt -R"
-else if type pacman ^ /dev/null > /dev/null
+else if installed pacman ^ /dev/null > /dev/null
   # Pacman version
   abbr install "sudo pacman -S"
   abbr update "pacman -Syu"
   abbr remove "pacman -R"
-else if type brew ^ /dev/null > /dev/null
+else if installed brew ^ /dev/null > /dev/null
   # Homebrew version
   abbr install "brew install"
   abbr update "brew upgrade"
   abbr remove "brew uninstall"
-else if type apt-get ^ /dev/null > /dev/null
+else if installed apt-get ^ /dev/null > /dev/null
   # Apt version
   abbr install "sudo apt-get install"
   abbr update "sudo apt-get update; sudo apt-get upgrade"
@@ -56,7 +56,7 @@ else if type apt-get ^ /dev/null > /dev/null
 end
 
 ## Rails stuff
-if type rails ^ /dev/null > /dev/null
+if installed rails ^ /dev/null > /dev/null
   abbr rc "rails console"
   abbr rs "rails server"
   abbr rr "rails runner"
@@ -69,7 +69,7 @@ abbr be "bundle exec"
 abbr gg "git grep -n"
 
 ## Steam Locomotive is better with flying disaster
-if type sl ^ /dev/null > /dev/null
+if installed sl ^ /dev/null > /dev/null
   abbr sl "sl -Fa"
 end
 
