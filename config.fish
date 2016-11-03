@@ -1,11 +1,14 @@
-# Path to Oh My Fish install.
-set -gx OMF_PATH "$HOME/.local/share/omf"
+# Load Oh-My-Fish if present
+if test -e "$HOME/.local/share/omf"
+  # Path to Oh My Fish install.
+  set -gx OMF_PATH "$HOME/.local/share/omf"
 
-# Customize Oh My Fish configuration path.
-set -gx OMF_CONFIG "$HOME/.config/omf"
+  # Customize Oh My Fish configuration path.
+  set -gx OMF_CONFIG "$HOME/.config/omf"
 
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+  # Load oh-my-fish configuration.
+  source $OMF_PATH/init.fish
+end
 
 # Utility function that does what you'd think
 function prepend_to_path
