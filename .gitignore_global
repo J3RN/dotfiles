@@ -23,3 +23,6 @@ passenger.3000.log
 
 # TAGS
 TAGS
+
+# Dotenv files
+.env
