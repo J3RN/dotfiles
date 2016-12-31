@@ -105,16 +105,6 @@ end
 
 # Welcome message
 function fish_greeting
-  # Print outdated packages
-  if installed brew
-    brew update > /dev/null
-    set outdated_packages (brew outdated | tr '\n' ' ')
-
-    if [ $outdated_packages ]
-      echo "Outdated packages: $outdated_packages"
-    end
-  end
-
   # Print out running Tmux sessions, if tmux is present
   if installed tmux
     set sessions (tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
