@@ -61,7 +61,9 @@ else
 fi
 
 ## Alias git to hub
-alias git="hub"
+if type hub &> /dev/null; then
+  alias git="hub"
+fi
 
 ## NeoVim
 alias vim="nvim"
