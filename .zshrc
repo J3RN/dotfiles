@@ -7,9 +7,6 @@ if [ -e $HOME/.oh-my-zsh ]; then
   source $ZSH/oh-my-zsh.sh
 fi
 
-# Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-
 # Include aliases, if they exist
 if [ -f $HOME/.aliases ]; then
   . $HOME/.aliases
