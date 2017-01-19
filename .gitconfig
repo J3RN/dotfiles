@@ -16,7 +16,7 @@
 	mkbr = checkout -b
 	rmbr = branch -d
 	mvbr = branch -m
-	com = commit -S -m
+	com = commit -m
 	st = status -s
 	pullbr = checkout --track
 	lsbr = branch
