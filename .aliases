@@ -64,4 +64,8 @@ fi
 if type hub &> /dev/null; then
   alias git=hub
 fi
+
+## Tmuxinator gem
+if type tmuxinator &> /dev/null; then
+  alias mux=tmuxinator
 fi
