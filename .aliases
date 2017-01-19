@@ -60,7 +60,8 @@ else
   alias ls="ls -GAlh"
 fi
 
-## Alias git to hub
+## Hub tool from GitHub (https://hub.github.com)
 if type hub &> /dev/null; then
-  alias git="hub"
+  alias git=hub
+fi
 fi
