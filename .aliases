@@ -1,3 +1,8 @@
+## Utility function for detecting installed programs without output
+installed () {
+  hash $argv &> /dev/null
+}
+
 ## For sourcing RC files
 alias szrc=". ~/.zshrc"
 alias sbrc=". ~/.bashrc"
@@ -26,27 +31,27 @@ alias ta="tmux attach -t"
 alias tn="tmux new -s"
 
 ## For Package management
-if type paktahn &> /dev/null; then
+if installed paktahn; then
   # Paktahn version
   alias install="paktahn -S"
   alias update="paktahn -Syu --aur"
   alias remove="pak -R"
-elif type yaourt &> /dev/null; then
+elif installed yaourt; then
   # Yaourt version
   alias install="yaourt -S"
   alias update="yaourt -Sau"
   alias remove="yaourt -R"
-elif type pacman &> /dev/null; then
+elif installed pacman; then
   # Pacman version
   alias install="sudo pacman -S"
   alias update="pacman -Syu"
   alias remove="pacman -R"
-elif type brew &> /dev/null; then
+elif installed brew; then
   # Homebrew version
   alias install="brew install"
   alias update="brew upgrade"
   alias remove="brew uninstall"
-elif type apt-get &> /dev/null; then
+elif installed apt-get; then
   # Apt version
   alias install="sudo apt-get install"
   alias update="sudo apt-get update; sudo apt-get upgrade"
