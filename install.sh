@@ -48,6 +48,7 @@ if type zsh &> /dev/null; then
   fi
 
   link_to_home .zshrc
+  link_to_home .zshenv
   link_to_home .aliases
 fi
 
