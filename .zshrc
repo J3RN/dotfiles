@@ -1,11 +1,4 @@
 ## Utility functions
-# PATH modification function
-append_if_exists () {
-  if [ -e $argv ]; then
-    export PATH="$PATH:$argv"
-  fi
-}
-
 # Copy function
 if hash pbcopy 2> /dev/null; then
     copy ()
@@ -22,13 +15,6 @@ if [ -e $HOME/.oh-my-zsh ]; then
     plugins=(git rails bundler history-substring-search zsh-syntax-highlighting)
     source $ZSH/oh-my-zsh.sh
 fi
-
-## PATH changes
-# Postgres.app to PATH for psql
-append_if_exists /Applications/Postgres.app/Contents/Versions/latest/bin
-
-# Add Heroku to path
-append_if_exists /usr/local/heroku/bin
 
 ## Modify LC_ALL for sane sorting under Linux
 #export LC_ALL="C"
