@@ -38,3 +38,5 @@
 	ui = auto
 [commit]
 	gpgSign = true
+[gpg]
+	program = gpg1
