@@ -8,19 +8,19 @@ append_if_exists () {
 
 # Copy function
 if hash pbcopy 2> /dev/null; then
-  copy ()
-  {
-    echo $argv | pbcopy
-  }
+    copy ()
+    {
+	echo $argv | pbcopy
+    }
 fi
 
 ## Load Oh My ZSH
 if [ -e $HOME/.oh-my-zsh ]; then
-  ZSH=$HOME/.oh-my-zsh
-  ZSH_THEME="agnoster"
-  COMPLETION_WAITING_DOTS="true"
-  plugins=(git rails bundler history-substring-search zsh-syntax-highlighting)
-  source $ZSH/oh-my-zsh.sh
+    ZSH=$HOME/.oh-my-zsh
+    ZSH_THEME="agnoster"
+    COMPLETION_WAITING_DOTS="true"
+    plugins=(git rails bundler history-substring-search zsh-syntax-highlighting)
+    source $ZSH/oh-my-zsh.sh
 fi
 
 ## PATH changes
@@ -53,18 +53,18 @@ export HOSTNAME="http://localhost:3000"
 
 ## Load rbenv
 if hash rbenv 2> /dev/null; then
-  eval "$(rbenv init -)"
+    eval "$(rbenv init -)"
 fi
 
 ## Load thefuck, if present
 if hash thefuck 2> /dev/null; then
-  eval "$(thefuck --alias)"
+    eval "$(thefuck --alias)"
 fi
 
 ## Inclusions
 # Source aliases, if they exist
 if [ -f $HOME/.aliases ]; then
-  source $HOME/.aliases
+    source $HOME/.aliases
 fi
 
 # Source private additions
@@ -75,10 +75,10 @@ fi
 ## Welcome message
 # Print out running Tmux sessions, if tmux is present
 if hash tmux 2> /dev/null; then
-  sessions=$(tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
+    sessions=$(tmux list-session 2> /dev/null | grep -Eo '^\w+' | tr '\n' ' ')
 
-  if [ $sessions ]; then
-    echo "Sessions: $sessions"
-    echo
-  fi
+    if [ $sessions ]; then
+	echo "Sessions: $sessions"
+	echo
+    fi
 fi
