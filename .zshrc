@@ -36,9 +36,10 @@ append_if_exists /usr/local/heroku/bin
 ## Other useful env vars
 # XDG base directory (default)
 export XDG_CONFIG_HOME=$HOME/.config
+export ZSH_CONFIG_HOME=$XDG_CONFIG_HOME/zsh
 
-# Use Vim, natürlich
-export EDITOR=vim
+# Use terminal Emacs as the default editor
+export EDITOR="emacs"
 
 # GOPATH
 export GOPATH=$HOME/.gocode
@@ -68,8 +69,9 @@ if [ -f $HOME/.aliases ]; then
 fi
 
 # Source private additions
-if [ -f $XDG_CONFIG_HOME/private.zsh ]; then
-  source $XDG_CONFIG_HOME/private.zsh
+private_path=$ZSH_CONFIG_HOME/private.zsh
+if [ -f $private_path ]; then
+    source $private_path
 fi
 
 ## Welcome message
