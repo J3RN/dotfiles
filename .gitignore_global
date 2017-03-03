@@ -5,6 +5,7 @@
 # Emacs files
 \#*\#
 *~
+.dir-locals.el
 
 # Packaged gems
 *.gem
@@ -29,3 +30,4 @@ TAGS
 
 # Org todo lists
 TODOs.org
+TODOs.org_archive
