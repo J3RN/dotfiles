@@ -55,18 +55,9 @@ else if installed apt-get ^ /dev/null > /dev/null
   abbr remove "sudo apt-get remove"
 end
 
-## Rails stuff
-if installed rails ^ /dev/null > /dev/null
-  abbr rc "rails console"
-  abbr rs "rails server"
-  abbr rr "rails runner"
-  abbr rg "rails generate"
-end
-
 ## Miscellaneous
 abbr ls "ls -GAlh"
 abbr be "bundle exec"
-abbr gg "git grep -n"
 
 ## Steam Locomotive is better with flying disaster
 if installed sl ^ /dev/null > /dev/null
