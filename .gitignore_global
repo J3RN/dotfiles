@@ -21,6 +21,9 @@ passenger.3000.log
 
 # TAGS
 TAGS
+GPATH
+GRTAGS
+GTAGS
 
 # Dotenv files
 .env
