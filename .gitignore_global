@@ -7,9 +7,6 @@
 *~
 .dir-locals.el
 
-# Packaged gems
-*.gem
-
 # Ruby versions (just trust me)
 .ruby-version
 
