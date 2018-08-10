@@ -38,3 +38,5 @@
 	ui = auto
 [commit]
 	gpgSign = true
+[github]
+	user = J3RN
