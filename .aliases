@@ -12,14 +12,6 @@ alias ac=$EDITOR\ ~/.config/awesome/rc.lua
 alias xmxr="xrdb -merge ~/.Xresources"
 alias zshrc=$EDITOR\ ~/.zshrc
 
-## For Mistakes
-alias c="clear"
-alias celar="clear"
-alias clea="clear"
-alias clar="clear"
-alias claer="clear"
-alias ckear="clear"
-
 ## For Tmux
 alias tls="tmux list-sessions"
 alias ta="tmux attach -t"
