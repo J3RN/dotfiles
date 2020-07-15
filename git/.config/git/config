@@ -1,0 +1,25 @@
+[user]
+	name = Jonathan Arnett
+	email = jonarnett90@gmail.com
+	signingkey = 68A91E8E3A8BD47D
+[push]
+	default = simple
+[alias]
+	co = checkout
+	br = branch
+	com = commit -m
+	st = status -s
+	adda = add -A
+	hist = log --oneline
+	mkbr = checkout -b
+	rmbr = branch -d
+	mvbr = branch -m
+	lsbr = branch
+	pullbr = checkout --track
+	lsrm = remote -v
+[color]
+	ui = auto
+# [commit]
+	# gpgSign = true
+[github]
+	user = J3RN
