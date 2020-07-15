@@ -1,6 +1,6 @@
 ## Utility function for detecting installed programs without output
 installed () {
-  hash $argv &> /dev/null
+  hash $argv 2> /dev/null
 }
 
 ## For sourcing RC files
