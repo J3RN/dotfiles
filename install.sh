@@ -7,3 +7,4 @@ fi
 
 stow -t ~ tmux
 stow -t ~ git
+stow -t ~ emacs
