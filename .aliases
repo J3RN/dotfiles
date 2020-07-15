@@ -20,11 +20,6 @@ alias clar="clear"
 alias claer="clear"
 alias ckear="clear"
 
-## For IRC
-alias irc="weechat"
-#alias irc="weechat-curses"
-#alias weechat="weechat-curses"
-
 ## For Tmux
 alias tls="tmux list-sessions"
 alias ta="tmux attach -t"
