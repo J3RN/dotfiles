@@ -1,6 +1,0 @@
-name: mux
-root: ~/Workspace/tmuxinator/
-
-windows:
-  - editor: eval $EDITOR
-  - tests: bundle exec rspec
