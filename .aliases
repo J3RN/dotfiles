@@ -51,8 +51,3 @@ if uname -a | grep "Linux" > /dev/null; then
 else
   alias ls="ls -GAlh"
 fi
-
-## Hub tool from GitHub (https://hub.github.com)
-if type hub &> /dev/null; then
-  alias git=hub
-fi
