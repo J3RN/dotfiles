@@ -40,18 +40,6 @@ yes_or_ask() {
   return 1
 }
 
-# Link ZSH files
-if type zsh &> /dev/null; then
-  if [ ! -e "$HOME/.oh-my-zsh" ]; then
-    echo "Installing oh-my-zsh"
-    curl -L "https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh" | sh
-  fi
-
-  link_to_home .zshrc
-  link_to_home .zshenv
-  link_to_home .aliases
-fi
-
 # Link Tmux files
 if type tmux &> /dev/null; then
   link_to_home .tmux.conf
