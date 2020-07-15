@@ -54,16 +54,3 @@ if type git &> /dev/null; then
 
   link_to_home .gitignore_global
 fi
-
-# Link Fish files and install oh-my-fish
-if type fish &> /dev/null; then
-  # Install oh-my-fish
-  if [ ! -e "$HOME/.local/share/omf" ]; then
-    echo "Installing oh-my-fish"
-    curl -L http://get.oh-my.fish | fish
-  fi
-
-  # Link fish configs
-  link_special "config.fish" "$HOME/.config/fish/config.fish"
-  link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
-fi
