@@ -67,10 +67,3 @@ if type fish &> /dev/null; then
   link_special "config.fish" "$HOME/.config/fish/config.fish"
   link_special "abbreviations.fish" "$HOME/.config/fish/abbreviations.fish"
 fi
-
-# Link Tmuxinator files
-if type tmuxinator &> /dev/null; then
-  if yes_or_ask "Would you like my Tmuxinator projects (you probably don't)?" "Cool, I totally understand."; then
-    link_to_home .tmuxinator
-  fi
-fi
