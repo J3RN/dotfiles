@@ -31,3 +31,6 @@ GTAGS
 # Org todo lists
 TODOs.org
 TODOs.org_archive
+
+# ElixirLS data
+.elixir_ls

@@ -8,27 +8,55 @@ My editor configs are now located in separate repositories:
 
 ## Requirements
 
-This has been tested on macOS and Ubuntu. I make no guarantees about other systems.
+GNU Stow is required. In fact the `./install.sh` script is just calls stow.
 
-The shells `fish` and `zsh` should not be hard dependencies, but your experience will be better if you use one or the other. To use one of these shells, you will probably first need to install it.
+Stow is available from Homebrew
+```
+brew install stow
+```
 
-If other things seems to be required, please open an issue and I will address that.
+Stow is also available from most Linux package managers
+```
+apt install stow
+```
+```
+dnf install stow
+```
+
+This set of configuration has been tested on macOS and Fedora.
 
 ## Installation
 
 The install script assumes that you have Bash installed. This is likely the case.
 
-To install, run:
+To install everything, run
 ```bash
 ./install.sh
 ```
 
-If you're re-installing, or really don't care about your own dotfiles being clobbered, you can run:
+You can, instead, install the configurations in a piecemeal style. There are three stow "packages":
+- `git`
+- `tmux`
+- `aliases`
+
+If, for instance, you only want the tmux configuration, you can run
 ```bash
-./install.sh -y
+git stow -t ~ tmux
 ```
 
 That's it! Enjoy!
+
+## Uninstallation
+
+Not happy? I understand. To uninstall everything, run
+```
+./uninstall.sh
+```
+
+To only uninstall one specific "package", run
+```
+git stow -t ~ --delete tmux
+```
 
 ## LICENSE
 

@@ -5,5 +5,5 @@ if ! hash stow; then
   exit 1
 fi
 
-stow -t ~ tmux
-stow -t ~ git
+stow -t ~ -D tmux
+stow -t ~ -D git
