@@ -23,3 +23,5 @@
 	# gpgSign = true
 [github]
 	user = J3RN
+[init]
+	defaultBranch = main
