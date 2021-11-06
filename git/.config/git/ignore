@@ -34,3 +34,6 @@ TODOs.org_archive
 
 # ElixirLS data
 .elixir_ls
+
+# Lefthook config
+lefthook.yml
