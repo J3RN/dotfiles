@@ -1,3 +1,3 @@
-if [ -f /home/j3rn/elixir-ls ]; then
-    export PATH=/home/j3rn/elixir-ls:$PATH
+if [ -f $HOME/elixir-ls ]; then
+    export PATH=$HOME/elixir-ls:$PATH
 fi
