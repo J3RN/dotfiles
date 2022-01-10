@@ -9,3 +9,4 @@ stow -t ~ tmux
 stow -t ~ git
 stow -t ~ emacs
 stow -t ~ bash
+stow -t ~ zsh
