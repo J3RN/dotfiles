@@ -10,3 +10,4 @@ cdpwdhook () {
 }
 
 export PROMPT_COMMAND=cdpwdhook
+export PS1="[\u@\h \w \A]\$ "
