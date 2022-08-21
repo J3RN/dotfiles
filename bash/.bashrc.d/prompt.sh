@@ -10,4 +10,9 @@ cdpwdhook () {
 }
 
 export PROMPT_COMMAND=cdpwdhook
-export PS1="[\u@\h \w \A]\$ "
+
+if hash starship 2> /dev/null; then
+    eval "$(starship init bash)"
+else
+    export PS1="[\u@\h \w \A]\$ "
+fi
