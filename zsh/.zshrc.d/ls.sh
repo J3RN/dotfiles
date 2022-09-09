@@ -1,5 +1,5 @@
 if [ $(uname -s) = "Linux" ]; then
-    alias ls="ls -lh --color=auto --group-directories-first"
+    alias ls="ls -Alh --color=auto --group-directories-first"
 else
-    alias ls="ls -Glh"
+    alias ls="ls -GAlh"
 fi
