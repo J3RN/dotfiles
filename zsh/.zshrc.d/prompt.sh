@@ -1,5 +1,5 @@
 function hr () {
-    printf %"$COLUMNS"s | tr " " "-" | xargs echo
+    printf %"$COLUMNS"s\\n | tr " " "-"
 }
 
 function chpwd() {
