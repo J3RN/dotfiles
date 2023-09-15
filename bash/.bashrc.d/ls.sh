@@ -1,9 +1,9 @@
 if hash lsd 2> /dev/null; then
-    alias ls="lsd -lh --group-directories-first"
+    alias ls="lsd -lAh --group-directories-first"
 elif hash exa &> /dev/null; then
-    alias ls="exa -l --group-directories-first --git"
+    alias ls="exa -la --group-directories-first --git"
 elif [ $(uname -s) = "Linux" ]; then
-    alias ls="ls -lh --color=auto --group-directories-first"
+    alias ls="ls -lAh --color=auto --group-directories-first"
 else
-    alias ls="ls -Glh"
+    alias ls="ls -GAlh"
 fi
