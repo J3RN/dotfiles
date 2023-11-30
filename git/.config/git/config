@@ -25,3 +25,5 @@
 	user = J3RN
 [init]
 	defaultBranch = main
+[diff]
+	algorithm = histogram
