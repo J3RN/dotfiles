@@ -1,4 +1,4 @@
 # ghcup-env
-if [ -f "/var/home/j3rn-work/.ghcup/env" ]; then
-    source "/var/home/j3rn-work/.ghcup/env"
+if [ -f "$HOME/.ghcup/env" ]; then
+    source "$HOME/.ghcup/env"
 fi
