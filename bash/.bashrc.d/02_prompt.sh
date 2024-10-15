@@ -9,7 +9,11 @@ cdpwdhook () {
   fi
 }
 
-export PROMPT_COMMAND="$PROMPT_COMMAND;cdpwdhook"
+if test -z "$PROMPT_COMMAND"; then
+    export PROMPT_COMMAND="cdpwdhook"
+else
+    export PROMPT_COMMAND="$PROMPT_COMMAND;cdpwdhook"
+fi
 
 if hash starship 2> /dev/null && [[ $TERM != "dumb" ]]; then
     eval "$(starship init bash)"
