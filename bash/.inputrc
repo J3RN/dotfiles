@@ -1,3 +1,12 @@
+# highlight the completion prefix in completions
+set colored-completion-prefix on
+# ls-style colors for completions
+set colored-stats on
+# ignore case in completions
 set completion-ignore-case on
+# Hitting tab will show completions if there is more than one
 set show-all-if-ambiguous on
+# Hitting tab again will complete the first one
+Tab: menu-complete
+# Complete the common prefix of completions
 set menu-complete-display-prefix on
