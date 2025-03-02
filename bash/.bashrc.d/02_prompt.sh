@@ -4,7 +4,7 @@ hr () {
 
 cdpwdhook () {
   if [[ "$PREVPWD" != "$PWD" ]]; then
-    hr && command ls -A --color=always && hr
+    hr && command ls --group-directories-first -A --color=always && hr
     export PREVPWD="$PWD"
   fi
 }
