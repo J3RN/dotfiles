@@ -10,7 +10,7 @@
 	com = commit -m
 	st = status -s
 	adda = add -A
-	hist = log --oneline
+	hist = log --pretty=hist
 	mkbr = checkout -b
 	rmbr = branch -d
 	mvbr = branch -m
@@ -21,6 +21,8 @@
 	ui = auto
 # [commit]
 	# gpgSign = true
+[pretty]
+	hist = format:%C(auto)%h %Cgreen%as%C(auto)%d %s
 [github]
 	user = J3RN
 [init]
