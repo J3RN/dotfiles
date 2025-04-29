@@ -15,6 +15,7 @@
 	rmbr = branch -d
 	mvbr = branch -m
 	lsbr = branch
+	ls = log --oneline --graph --decorate
 	pullbr = checkout --track
 	lsrm = remote -v
 [color]
