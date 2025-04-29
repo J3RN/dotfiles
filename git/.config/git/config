@@ -16,6 +16,7 @@
 	mvbr = branch -m
 	lsbr = branch
 	ls = log --oneline --graph --decorate
+	unstage = restore --staged
 	pullbr = checkout --track
 	lsrm = remote -v
 [color]
