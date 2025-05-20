@@ -5,8 +5,9 @@ if ! type stow; then
   exit 1
 fi
 
-stow -t ~ tmux
-stow -t ~ git
-stow -t ~ emacs
 stow -t ~ bash
+stow -t ~ emacs
+stow -t ~ git
+stow -t ~ starship
+stow -t ~ tmux
 stow -t ~ zsh
