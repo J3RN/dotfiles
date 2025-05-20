@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-if ! hash stow; then
+if ! type stow; then
   echo "GNU Stow is required, but not found. Exiting."
   exit 1
 fi
