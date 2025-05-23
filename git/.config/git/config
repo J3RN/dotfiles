@@ -11,6 +11,7 @@
 	st = status -s
 	adda = add -A
 	hist = log --pretty=hist
+	recent = hist -n 10
 	mkbr = checkout -b
 	rmbr = branch -d
 	mvbr = branch -m
