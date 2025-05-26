@@ -6,7 +6,6 @@ if ! type stow &> /dev/null; then
 fi
 
 stow -t ~ bash
-stow -t ~ emacs
 stow -t ~ git
 stow -t ~ starship
 stow -t ~ tmux
