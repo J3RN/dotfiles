@@ -34,14 +34,16 @@ To install everything, run
 ./install.sh
 ```
 
-You can, instead, install the configurations in a piecemeal style. There are three stow "packages":
+You can, instead, install the configurations in a piecemeal style. There are several stow "packages":
+- `bash`
 - `git`
+- `starship`
 - `tmux`
-- `aliases`
+- `zsh`
 
 If, for instance, you only want the tmux configuration, you can run
 ```bash
-git stow -t ~ tmux
+stow -t ~ tmux
 ```
 
 That's it! Enjoy!
@@ -55,7 +57,7 @@ Not happy? I understand. To uninstall everything, run
 
 To only uninstall one specific "package", run
 ```
-git stow -t ~ --delete tmux
+stow -t ~ --delete tmux
 ```
 
 ## LICENSE
