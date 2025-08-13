@@ -12,6 +12,7 @@
 	adda = add -A
 	hist = log --pretty=hist
 	recent = hist -n 10
+	fpush = push --force-with-lease
 	mkbr = checkout -b
 	rmbr = branch -d
 	mvbr = branch -m
