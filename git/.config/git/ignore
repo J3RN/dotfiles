@@ -37,3 +37,6 @@ TODOs.org_archive
 
 # Lefthook config
 lefthook.yml
+
+# Laborant LSP cache
+.laborant
