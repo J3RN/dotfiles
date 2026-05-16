@@ -3,7 +3,7 @@ function reify() {
 
     case $3 in
         "" | github) repo="git@github.com:$1/$2" ;;
-        codeberg) repo="git@codeberg.org/$1/$2" ;;
+        codeberg) repo="ssh://git@codeberg.org/$1/$2" ;;
         *) >&2 echo "Unknown forge '$3'" && return 1 ;;
     esac
 
