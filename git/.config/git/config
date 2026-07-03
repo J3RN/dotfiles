@@ -2,8 +2,10 @@
 	name = Jonathan Arnett
 	email = j3rn@j3rn.com
 	signingkey = 68A91E8E3A8BD47D
+
 [push]
 	default = simple
+
 [alias]
 	co = checkout
 	br = branch
@@ -21,15 +23,34 @@
 	unstage = restore --staged
 	pullbr = checkout --track
 	lsrem = remote -v
+
 [color]
 	ui = auto
+
 # [commit]
 	# gpgSign = true
+
 [pretty]
 	hist = format:%C(auto)%h %Cgreen%as%C(auto)%d %s
+
 [github]
 	user = J3RN
+
 [init]
 	defaultBranch = main
+
 [diff]
 	algorithm = histogram
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictStyle = zdiff3
