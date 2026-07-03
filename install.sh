@@ -7,6 +7,7 @@ fi
 
 stow -t ~ bash
 stow -t ~ git
+stow -t ~ mise
 stow -t ~ starship
 stow -t ~ tmux
 stow -t ~ zsh

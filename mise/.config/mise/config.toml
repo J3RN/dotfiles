@@ -1,0 +1,40 @@
+[tools]
+
+# Programming Languages
+
+"core:elixir" = "latest"
+"core:erlang" = "latest"
+"core:node" = "latest"
+"core:ruby" = "latest"
+
+"aqua:gleam" = "latest"
+
+"github:ocaml/opam" = "latest"
+"github:unisonweb/unison" = "latest"
+
+# Programming Language Tools
+
+"aqua:pipx" = "latest"
+"aqua:pnpm" = "latest"
+"aqua:expert-lsp/expert" = "latest"
+
+# Actual tools
+
+"aqua:bat" = "latest"
+"aqua:delta" = "latest"
+"aqua:duf" = "latest"
+"aqua:dust" = "latest"
+"aqua:eza" = "latest"
+"aqua:fd" = "latest"
+"aqua:ollama" = "latest"
+"aqua:ripgrep" = "latest"
+"aqua:starship" = "latest"
+"aqua:terraform" = "latest"
+"aqua:zoxide" = "latest"
+
+"cargo:tokei" = "latest"
+
+[settings]
+
+[settings.ruby]
+compile = false
