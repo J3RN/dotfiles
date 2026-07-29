@@ -35,6 +35,7 @@ To install everything, run
 You can, instead, install the configurations in a piecemeal style. There are several stow "packages":
 - `bash`
 - `git`
+- `mise`
 - `starship`
 - `tmux`
 - `zsh`
