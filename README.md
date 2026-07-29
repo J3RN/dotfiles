@@ -10,12 +10,10 @@ My editor configs are now located in separate repositories:
 
 GNU Stow is required. In fact the `./install.sh` script is just calls stow.
 
-Stow is available from Homebrew
+Stow is available from Homebrew and most Linux package managers:
 ```
 brew install stow
 ```
-
-Stow is also available from most Linux package managers
 ```
 apt install stow
 ```
