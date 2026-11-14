@@ -23,6 +23,16 @@ apt install stow
 dnf install stow
 ```
 
+Alternatively, you can use an ephemeral container, like so:
+
+```
+PROJ_PATH=$(realpath --relative-to=$HOME .); podman run --rm \
+  -v=".:/fakehome/$PROJ_PATH:Z" \
+  -v="$HOME/.config:/fakehome/.config:Z" \
+  -w "/fakehome/$PROJ_PATH" \
+  --env "HOME=/fakehome" \
+  registry.fedoraproject.org/fedora-minimal sh -c 'dnf install -y stow && <cmd>'
+```
 
 ## Installation
 
