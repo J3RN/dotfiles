@@ -35,6 +35,7 @@
 "cargo:tokei" = "latest"
 
 [settings]
+experimental = true
 
 [settings.ruby]
 compile = false
