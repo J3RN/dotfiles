@@ -6,6 +6,8 @@ My editor configs are now located in separate repositories:
 - [Vim config](https://github.com/J3RN/vim-config)
 - [Emacs config](https://github.com/J3RN/emacs-config)
 
+This set of configuration has been tested on macOS and Fedora.
+
 ## Requirements
 
 GNU Stow is required. In fact the `./install.sh` script is just calls stow.
@@ -21,7 +23,6 @@ apt install stow
 dnf install stow
 ```
 
-This set of configuration has been tested on macOS and Fedora.
 
 ## Installation
 
